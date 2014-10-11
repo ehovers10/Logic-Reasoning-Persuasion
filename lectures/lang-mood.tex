@@ -1,0 +1,368 @@
+\documentclass[10pt,letterpaper,xcolor=dvipsnames,handout]{beamer}
+
+%\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{amssymb,mathabx}
+\usepackage{linguex}
+\usepackage{verbatim,enumerate,multirow}
+\usepackage{xcolor}
+\usepackage{floatflt}
+
+\usepackage{pgfpages} % to put several slides on one page
+\pgfpagesuselayout{4 on 1}[letterpaper, landscape, border shrink=5mm]
+
+%Packages needed for trees
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[varg]{txfonts}
+\usepackage{qtree}
+
+\mode<article>{}
+
+%Template themes
+\usetheme{boxes}
+%\useoutertheme{miniframes}
+\useoutertheme{shadow}
+
+%Templates
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}[vertical]
+\setbeamertemplate{section in head/foot shaded}[default][20]
+\setbeamertemplate{title}
+
+\setbeamertemplate{headline}
+{
+	\begin{beamercolorbox}[ht=3ex,dp=1ex]{erikcolor1}
+		\insertshorttitle
+		%\insertsectionnavigationhorizontal{\textwidth}{}{}
+		%\usebeamerfont{title in head/foot}
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[ht=3ex,dp=2ex]{erikcolor2}
+	  \insertsectionnavigationhorizontal{\textwidth}{}{}
+		%\insertsubsectionnavigationhorizontal{\textwidth}{}{}
+		%\insertsubsection
+	\end{beamercolorbox}
+}
+\setbeamertemplate{footline}
+{
+	\begin{beamercolorbox}[ht=3ex,dp=1ex]{erikcolor1}
+		\insertshortinstitute[width=.33\textwidth,center] %$\triangleright$
+		\insertshortsubtitle[width=.33\textwidth,center] %$\triangleright$
+		\insertshortdate[width=.20\textwidth,center] %$\triangleright$
+		\hfill\insertframenumber\,/\,\inserttotalframenumber\;\;\;
+	\end{beamercolorbox}
+}
+
+%Font themes
+\usefonttheme{structuresmallcapsserif}
+%\usefonttheme[onlysmall]{structurebold}
+\usefonttheme{serif}
+
+%Color themes
+%\usecolortheme{beetle}
+%\usecolortheme{rose}
+
+%Head and foot lines colors
+\setbeamercolor{erikcolor1}{fg=white,bg=blue!70!green}
+\setbeamercolor{erikcolor2}{fg=white,bg=blue!60!green!10!white}
+
+%Titles color
+\setbeamercolor{frametitle}{fg=black,bg=green!30!blue!30!white}
+\setbeamercolor{title}{fg=black,bg=green!30!blue!30!white}
+
+%Block color
+\setbeamercolor{block title}{fg=white,bg=blue!70!green}
+\setbeamercolor{block body}{fg=black,bg=green!30!blue!30!white}
+
+%Background color
+\setbeamercolor{background canvas}{bg=}
+
+%Covered items color
+\setbeamercovered{transparent}
+
+%Alterted text
+\setbeamerfont{alerted text}{series=\bfseries, size=\Large}
+
+\AtBeginSection[]
+{
+   \begin{frame}<beamer>
+       \frametitle{Lecture plan}
+       \tableofcontents[currentsection,currentsubsection]
+   \end{frame}
+}
+
+
+
+\title{Varieties of meaning}
+\subtitle{}
+\author[Hoversten]{Erik Hoversten}
+\institute[lrp-f14]{Logic, reason, and persuasion: fall 2014 \\ Rutgers University}
+\date[09/17/2014]{September 17, 2014}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\section{}
+
+\begin{frame}
+\frametitle{Content and force}
+
+Previously, we drew a distinction between two elements of a statement that someone makes during a conversational exchange.
+
+\uncover<2->{\Tree [.{\textbf{Statement}}
+  [.{\textbf{Content} \\ what the statement \textit{means}} 
+   [.{\textit{Proposition}}  ] ]  
+   [.{\textbf{Force} \\ what the statement \textit{does}}
+    [.{\textit{Assertoric}} ] ]
+    ]}
+
+
+\begin{block}<3->{``It's cold in here!''}
+\begin{itemize}
+  \item Content $\rightarrow$ \textit{The temperature is lower than average at this location.}
+  \item Force $\rightarrow$ Get someone to turn up the thermostat.
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Another meaning distinction}
+
+Sometimes, force and content can get bound up together within a single word.  This is because words can exhibit two kinds of meaning:
+
+\begin{block}<2->{Cognitive meaning}
+  \begin{itemize}
+  \item This aspect of meaning conveys \textit{information} or \textit{fact}.
+  \item "Georgia", "thirty-six", "record", "time", "banana", "swim"
+  \end{itemize}
+\end{block}
+
+\begin{block}<3->{Emotive meaning}
+  \begin{itemize}
+  \item This aspect of meaning expresses or evokes \textit{feelings}.
+  \item "cruel", "hapless", "lovely", "murder", "honorable", "crazy", "awesome"
+  \end{itemize}
+\end{block}
+
+\uncover<4->{Often, the understood meaning of words used in conversation will incorporate both of these aspects.}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Emotive meaning}
+  
+  \begin{block}{Why it's important}
+    \begin{itemize}
+      \item Arguments ultimately involve \textbf{value claims}: they are used to claim that something is good/bad, right/wrong, better/worse, important/unimportant.
+      \item Emotive meaning can be a powerful tool in persuading an audience to take one's argument seriously.
+      \item And only if people's feelings are engaged will they be likely to take action on an issue.
+    \end{itemize}
+  \end{block}
+  
+  \begin{block}<2->{Why it can be dangerous}
+    \begin{itemize}
+      \item But we also want to maintain an accurate picture of the world when we assess arguments.
+      \item And emotive meaning can sometimes cloud the information provided in an argument.
+      \item It can lead us to believe an argument is more forceful than it actually is.
+    \end{itemize}
+  \end{block}
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{Reason and persuasion}
+
+  In order to properly assess arguments, we must take care to:
+  \begin{itemize}
+    \item be aware of the power of emotive meaning, and
+    \item be able to separate out the cognitive import from the merely emotional bits of the words that are used in an argument.
+  \end{itemize}  
+
+\begin{block}<2->{An apparently forceful argument}
+
+Now that we know that the rocks on the moon are similar to those in our backyard and that tadpoles can exist in a weightless environment, and now that we have put the rest of the world in order, can we concentrate on the problems here at home? Like what makes people hungry and why is unemployment so elusive?
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Controlling for emotive meaning}
+
+\begin{block}{A more rigorous representation}
+
+  \begin{enumerate}
+    \item The space program has been confined to work on ordinary rocks and tadpoles.
+    \item Ordinary rocks and tadpoles are less important than domestic hunger and unemployment.
+    \item Our international efforts have restored order to every nation on Earth but our own.
+    \item These efforts have been directed to problems that are less important than our own domestic problems.
+    \item $\therefore$, our government should redirect funds that have been spent on these projects to solving our own domestic problems.
+  \end{enumerate}
+  
+\end{block}
+
+\uncover<2->{Consider: are premises 1, 3, 4, 5 true?}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{It depends on what you mean by...}
+
+\begin{block}{Vagueness}
+\begin{itemize}
+  \item Vague words allow for \textit{borderline cases}.
+  \item For these cases it is difficult (or even impossible) to tell whether the word applies or not.
+  \item The word can be interpreted in many, similar but different ways.
+\end{itemize}
+\end{block}
+
+\begin{block}<2->{Example vague word: ``Rich''}
+  \begin{itemize}
+    \item A CEO is clearly rich.
+    \item A janitor is clearly not rich.
+    \item But what about a middle manager with a 401K, student loans, and a mortgage.
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{It depends on what you mean by...}
+
+\begin{block}{Ambiguity}
+  \begin{itemize}
+    \item Ambiguous words have a couple, distinct meanings, which can be very different.
+    \item To interpret these words, we have to be clear which meaning we have in mind.
+  \end{itemize}
+\end{block}
+
+\begin{block}<2->{Example ambiguous word: ``Sick''}
+  \begin{itemize}
+    \item ``The first performer who came out was totally sick!''
+    \item This could be a criticism, if the intended meaning is \textit{unhealthy}.
+    \item Or it could be praise, if the intended meaning is \textit{impressive}.
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Kinds of dispute}
+
+A dispute is any \textit{conflict of opinion} between two or more individuals.  But not all disputes are of equal significance.
+
+\begin{block}<2->{Spurious disputes...}
+\begin{itemize}
+  \item arise when people \textit{seem} to have a conflict, but there is no actual difference in opinion.
+  \item A: ``I'm hungry.''
+  \item B: ``No!  I'm not hungry at all.''
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Kinds of dispute}
+  
+  \begin{block}{Factual disputes...}
+    \begin{itemize}
+      \item arise when there is a conflict of opinion over what actually happened.
+      \item A: ``Gary ate the last cookie.  I know because Sally told me it was him.''
+      \item B: ``It couldn't have been Gary. He doesn't even like cookies!  Sally must have it out for him.''
+    \end{itemize}
+  \end{block}
+  
+  \begin{block}<2->{Verbal disputes...}
+    \begin{itemize}
+      \item arise when there is a conflict of opinion about whether a word properly applies in a situation.
+      \item A: ``Bill is a hero! Disarming that robber was incredibly brave.''
+      \item B: ``It wasn't brave; it was stupid.  He's lucky he didn't get killed!''
+    \end{itemize}
+  \end{block}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Verbal disputes can be very significant}
+  
+  \begin{block}{Adiran Peterson was recently charged with negligent injury to a child}
+  \begin{itemize}
+    \item All parties to the disupte agree on the circumstances of the event: Peterson beat his child using a switch in response to inappropriate behavior by his child.
+    \item Peterson's accusers maintain that his actions constitute child abuse.
+    \item Peterson and his defenders maintain that his action was in accordance with appropriate discipline of a child.
+    \item The dispute here is over where to draw the boundary between ``appropriate discipline'' and ``abuse''.
+  \end{itemize}
+  \end{block}
+
+This example involves a verbal dispute in our sense, but it is far from merely a matter of ``semantics''.  Each party can bring up objective, public reasons for their stance on the issue.  And whatever side we come down on will have serious implications both for Peterson specifically and for societal approach to child rearing generally.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Intension and extension}
+  
+  \begin{itemize}
+    \item Recall that \textit{atomic propositions} have both a \textbf{subject} and a \textbf{predicate}.
+    \item Subjects refer to things (either particular individuals or groups/unspecific individuals).
+    \item Predicates pick out properties.
+    \item We say that the proposition is true if the property picked out by the predicate \textit{applies} to the thing(s) referred to by the subject.
+  \end{itemize}
+  
+  But subjects can refer to things in two different ways:
+  \begin{itemize}
+    \item by extension
+    \item by intension
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extension}
+  
+  The extension of a subject term is the individual or individuals of the class that the term refers to. We also call this the \textbf{denotation} of the term.
+  
+  \begin{block}{Extension of ``state university''}
+    \begin{itemize}
+      \item Rutgers
+      \item University of Oklahoma
+      \item Cal State Fulerton
+      \item $\ldots$
+    \end{itemize}
+  \end{block}
+  
+  Extensions of terms will change over time and circumstances.
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Intension}
+  
+  The intension of a subject term is the set of attributes \textit{in virtue of which} an individual belongs to the class referred to by the term. We also call this the \textbf{connotation} of the term.
+  
+  \begin{block}{Intension of ``state university''}
+    \begin{itemize}
+      \item institute of higher learning
+      \item confers Bachelor's degrees
+      \item established and fincanced by state governments
+      \item $\ldots$
+    \end{itemize}
+  \end{block}
+  
+  The intension of a term only changes if the meaning of the term evolves.
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Next class meeting}
+  
+  \begin{itemize}
+    \item We will begin looking at \textbf{informal fallacies} of reasoning.
+    \item Relevant readings: \S\S 3.1-3.3
+    \item Homework \#1 is due at the beginning of class.
+  \end{itemize}
+  
+\end{frame}
+\end{document}

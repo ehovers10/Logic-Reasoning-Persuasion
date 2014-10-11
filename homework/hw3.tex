@@ -1,0 +1,147 @@
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{enumerate,verbatim,mdwlist}
+\usepackage{fancyhdr}
+\usepackage{linguex}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+
+%Packages needed for trees
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[varg]{txfonts}
+\usepackage{qtree}
+
+\include{tikz-venn-diagrams}
+
+%% Margin Setting
+\geometry{hmargin={.5in,.5in},vmargin={1in,1in}}
+\setlength{\parindent}{0.0in}
+%\setlength{\parskip}{2mm}
+\setlength{\tabcolsep}{10pt}
+\setlength{\arraycolsep}{10pt}
+
+%% Header
+\setlength{\headheight}{23pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{Phil 101, f14}
+\fancyhead[C]{Homework \# 3}
+\fancyhead[R]{Due: Thursday October 16, 2014 \\ Point total: 20 points}
+
+\begin{document}
+
+\small
+
+\textbf{Name:}\underline{\hspace{2in}}
+
+\paragraph{The language of categorical logic}
+
+\begin{enumerate}
+ \item What is the primary difference between the \textbf{Boolean} and \textbf{Aristotelian} perspectives on categorical logic? \textbf{(1 point)}
+ 
+\suspend{enumerate}
+
+\vspace{1.5cm}
+
+\paragraph{Syntactic relations}
+
+\resume{enumerate}
+  \item Write the converse of \textit{Some A are non-B}: \underline{\hspace{3in}} \textbf{(1 point)}
+  
+  \item Write the obverse of \textit{No Q are S}: \underline{\hspace{3in}} \textbf{(1 point)}
+  
+  \item Write the contraposition of \textit{Some non-M are not N}: \underline{\hspace{3in}} \textbf{(1 point)}
+\suspend{enumerate}
+
+\paragraph{Semantic relations}
+
+\resume{enumerate}
+  \item Assume that \textit{All A are B} is true. 
+  
+  Then the truth value of \textit{No A are B} is: \hspace{1cm} True \hspace{1cm} False \hspace{1cm} Undetermined \hspace{1cm} \textbf{(circle one, 1 point)} \\
+  
+  The relation that allows us to make that claim is: \underline{\hspace{3in}} \textbf{(1 point)}
+  
+  \item Assume that \textit{Some F are G} is false. 
+  
+  Then the truth value of \textit{All F are G} is: \hspace{1cm} True \hspace{1cm} False \hspace{1cm} Undetermined \hspace{1cm} \textbf{(circle one, 1 point)} \\
+  
+  The relation that allows us to make that claim is: \underline{\hspace{3in}} \textbf{(1 point)}
+  
+\suspend{enumerate}
+
+\paragraph{Direct inferences}
+
+\resume{enumerate}
+  \item Assume the \textbf{Boolean perspective}, and consider the direct inference: \textit{Some W are not X}. Therefore, it is false that \textit{no W are X}.
+  
+  \vspace{3mm}
+  
+  This inference is: \hspace{1cm} Valid \hspace{1cm} Invalid \hspace{1cm} Conditionally valid \hspace{1cm} \textbf{(circle one, 1 point)}
+  
+  \vspace{3mm}
+  
+  Justify your answer in the space below.  You may use either method for assessing the validity of direct inferences. \textbf{(2 points)}
+  
+  \vspace{4cm}
+  
+  \item Assume the \textbf{Aristotelian perspective}, and consider the direct inference: It is false that \textit{some R are S}. Therefore, it is false that \textit{All R are S}.
+  
+  \vspace{3mm}
+  
+  This inference is: \hspace{1cm} Valid \hspace{1cm} Invalid \hspace{1cm} Conditionally valid \hspace{1cm} \textbf{(circle one, 1 point)}
+  
+  \vspace{3mm}
+  
+  Justify your answer in the space below.  You may use either method for assessing the validity of direct inferences. \textbf{(2 points)}
+  
+\suspend{enumerate}
+
+\newpage
+
+\paragraph{Syllogisms}
+
+\resume{enumerate}
+  \item Consider the syllogism:
+    \begin{enumerate}[1)]
+     \item All P are M
+     \item All M are S
+     \item $\therefore,$ some S are P
+    \end{enumerate}
+
+    This syllogism is: \hspace{1cm} Valid \hspace{1cm} Invalid \hspace{1cm} Conditionally valid \hspace{1cm} \textbf{(circle one, 1 point)}
+    
+    \vspace{3mm}
+    
+    Justify your answer using the Venn diagram below \textbf{(2 points)}
+    
+    \begin{center}
+    \begin{tikzpicture}
+     \syllbox{S}{P}{M}
+    \end{tikzpicture}
+    \end{center}
+
+  \item Consider the syllogism:
+    \begin{enumerate}[1)]
+     \item Some M are P
+     \item No S are M
+     \item $\therefore,$ some S are not P
+    \end{enumerate}
+
+    This syllogism is: \hspace{1cm} Valid \hspace{1cm} Invalid \hspace{1cm} Conditionally valid \hspace{1cm} \textbf{(circle one, 1 point)}
+    
+    \vspace{3mm}
+    
+    Justify your answer using the Venn diagram below \textbf{(2 points)}
+    
+    \begin{center}
+    \begin{tikzpicture}
+     \syllbox{S}{P}{M}
+    \end{tikzpicture}
+    \end{center}
+  
+\end{enumerate}
+  
+\paragraph{Bonus:}  Demonstrate the fact that \textit{All Y are Z} and its obverse always have the same truth value. \textbf{(3 points)}
+
+\end{document}

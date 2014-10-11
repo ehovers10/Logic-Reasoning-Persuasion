@@ -1,0 +1,328 @@
+\documentclass[10pt,letterpaper,xcolor=dvipsnames,handout]{beamer}
+
+%\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{amssymb,mathabx}
+\usepackage{linguex}
+\usepackage{verbatim,enumerate,multirow}
+\usepackage{xcolor}
+%\usepackage{floatflt}
+
+\usepackage{pgfpages} % to put several slides on one page
+\pgfpagesuselayout{4 on 1}[letterpaper, landscape, border shrink=5mm]
+
+\mode<article>{}
+
+%Template themes
+\usetheme{boxes}
+%\useoutertheme{miniframes}
+\useoutertheme{shadow}
+
+%Templates
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}[vertical]
+\setbeamertemplate{section in head/foot shaded}[default][20]
+\setbeamertemplate{title}
+
+\setbeamertemplate{headline}
+{
+	\begin{beamercolorbox}[ht=3ex,dp=1ex]{erikcolor1}
+		\insertshorttitle
+		%\insertsectionnavigationhorizontal{\textwidth}{}{}
+		%\usebeamerfont{title in head/foot}
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[ht=3ex,dp=2ex]{erikcolor2}
+	  \insertsectionnavigationhorizontal{\textwidth}{}{}
+		%\insertsubsectionnavigationhorizontal{\textwidth}{}{}
+		%\insertsubsection
+	\end{beamercolorbox}
+}
+\setbeamertemplate{footline}
+{
+	\begin{beamercolorbox}[ht=3ex,dp=1ex]{erikcolor1}
+		\insertshortinstitute[width=.33\textwidth,center] %$\triangleright$
+		\insertshortsubtitle[width=.33\textwidth,center] %$\triangleright$
+		\insertshortdate[width=.20\textwidth,center] %$\triangleright$
+		\hfill\insertframenumber\,/\,\inserttotalframenumber\;\;\;
+	\end{beamercolorbox}
+}
+
+%Font themes
+\usefonttheme{structuresmallcapsserif}
+%\usefonttheme[onlysmall]{structurebold}
+\usefonttheme{serif}
+
+%Color themes
+%\usecolortheme{beetle}
+%\usecolortheme{rose}
+
+%Head and foot lines colors
+\setbeamercolor{erikcolor1}{fg=white,bg=blue!70!green}
+\setbeamercolor{erikcolor2}{fg=white,bg=blue!60!green!10!white}
+
+%Titles color
+\setbeamercolor{frametitle}{fg=black,bg=green!30!blue!30!white}
+\setbeamercolor{title}{fg=black,bg=green!30!blue!30!white}
+
+%Block color
+\setbeamercolor{block title}{fg=white,bg=blue!70!green}
+\setbeamercolor{block body}{fg=black,bg=green!30!blue!30!white}
+
+%Background color
+\setbeamercolor{background canvas}{bg=}
+
+%Covered items color
+\setbeamercovered{transparent}
+
+\AtBeginSection[]
+{
+   \begin{frame}<beamer>
+       \frametitle{Lecture plan}
+       \tableofcontents[currentsection,currentsubsection]
+   \end{frame}
+}
+
+
+
+\title{Welcome to logic, reason, and persuasion}
+\subtitle{Introductory class meeting}
+\author[Hoversten]{Erik Hoversten}
+\institute[lrp-f14]{Logic, reason, and persuasion: fall 2014 \\ Rutgers University}
+\date[09/03/2014]{September 3, 2014}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Course outline}
+
+\begin{frame}
+\frametitle{Overview}
+
+\begin{block}{In this class...}
+...we will introduce a variety of concepts and tools of \textbf{critical thinking}.  The primary tool of philosophical study is the \textbf{argument}.  We'll be examining argumentation from a variety of different perspectives.  We'll begin by introducing the concepts of \textbf{reason} and \textbf{reasoning}.  Once we have the basics down, we'll move on to \textbf{informal analysis} of arguments with an emphasis on understanding and diagnosing \textbf{informal fallacies} of reasoning.  The bulk of the term will be spent on formal argumentation.  We'll explore \textbf{deductive}, \textbf{inductive}, and \textbf{abductive} arguments in depth.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Your instructor}
+
+\begin{block}{Erik Hoversten}
+  \begin{tabular}{ll}
+    \textbf{Email:} & \href{mailto:ehoversten@philosophy.rutgers.edu}{ehoversten@philosophy.rutgers.edu} \\
+    \textbf{Office:} & \href{http://rumaps.rutgers.edu/location/gateway-transit-village}{106 Somerset St}, Room 534, CAC \\
+    \textbf{Office Hrs:} & Wed and Thurs 2:00p-3:30p, and by appt. \\
+  \end{tabular}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Expectations}
+
+\begin{block}<2->{Assessment}
+  \begin{tabular}{lll}
+   Assignment & Due date and time & Point value \\ \hline
+   Midterm exam & 10/20 in class & 100pts \\
+   Final exam & 12/16 8a-11a & 100pts \\
+   Homework & Various & 6 @ 20pts = 120pts \\
+  \end{tabular}
+\end{block}  
+
+\begin{block}<3->{Additional work}
+  \begin{itemize}
+    \item \textbf{Read} the assigned materials; preferably before the relevant class meeting.
+    \item \textbf{Practice} the recommended exercises.
+    \item \textbf{Engage} with your classmates using the chat room on the course website and by asking questions (and providing answers) in class.
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Course materials}
+
+\begin{block}<2->{Book}
+  \href{http://bit.ly/1rw2moM}{A Concise Introduction to Logic}, 12th edition, by Patrick Hurley
+\end{block}
+
+\begin{block}<3->{Additional resources}
+  Lecture notes and recommended readings available in the \textbf{Reasources} tab on the course website.
+\end{block}
+
+\begin{block}<4->{Course website}
+\href{https://sakai.rutgers.edu/portal/site/34443d66-a245-4833-953e-1d238502ff28}{LRP 05 F14}: access through Sakai
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Proposed schedule}
+\tiny
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multirow{3}{*}{Reasons \& reasoning} 
+ & W 09/03 & Syllabus & \\
+ & M 09/08 & Varieties of reasons & H: \S\S1.1-1.2, LN: reasons \\
+ & W 09/10 & Arguments & H: \S\S1.3-1.4 \\
+
+\hline
+\multirow{4}{*}{Informal analysis} 
+ & M 09/15 & Language \& translations & H: \S\S2.1-2.2 \\
+ & W 09/17 & Mood \& content &	\textcolor{red}{HW1 due} \\
+ & M 09/22 & Informal fallacies 1 & H: \S\S3.1-3.3 \\
+ & W 09/24 & Informal fallacies 2 & \S\S3.4-3.5\\
+ & M 09/29 & Buffer session & \\
+
+\hline
+\multirow{9}{*}{Deduction} 
+ & W 10/01 & Categorical propositions & H: \S\S4.1-4.2, \textcolor{red}{HW2 due} \\
+ & M 10/06 & Venn diagrams and syllogisms & H: Ch. 5 \\
+ & W 10/08 & Truth functions and connectives & H: \S\S6.1-6.3 \\
+ & M 10/13 & Rules of inference 1 & H: Ch. 7 \\
+ 
+ & W 10/15 & Review session & \textcolor{red}{HW3 due} \\
+ & M 10/20 & & \textcolor{red}{Midterm exam (in class)} \\
+ 
+ & W 10/22 & Rules of inference 2 & H: Ch. 7 \\
+ & M 10/27 & Buffer session & \\
+ 
+\hline 
+\multirow{6}{*}{Induction}  
+ & W 10/29 & Ampliative reasoning & \textcolor{red}{HW4 due} \\
+ & M 11/03 & Analogy & H: Ch. 9 \\
+ & W 11/05 & Probability & H: Ch. 11\\
+ & M 11/10 & Statistical reasoning & H: Ch. 12 \\
+ & W 11/12 & Decision theory & \textcolor{red}{HW5 due} \\
+ & M 11/17 & Applications & \\
+ & W 11/19 & Buffer session & \\
+
+\hline 
+\multirow{3}{*}{Abduction}
+
+ & M 11/24 & Scientific reasoning & H: Ch. 13 \\
+ & W 11/26 & & No class \\
+ & M 12/01 & The problem of induction & \textcolor{red}{HW6 due} \\
+ & W 12/03 & Science and pseudoscience & H: Ch. 14 \\
+ & M 12/08 & Applications & \\
+ & W 12/10 & Review session & \\
+ & T 12/16 & & \textcolor{red}{Final exam (8a-11a)} \\
+
+\hline
+
+\end{tabular}
+
+[H = Hurley, LN = Lecture notes (Sakai), AR = Additional reading (Sakai)]
+
+\end{frame}
+
+\section{What is philosophy?}
+
+\begin{frame}
+\frametitle{Common conceptions of philosophy}
+
+\begin{block}<2->{Useless}
+  Thinking really hard about stuff, but not actually doing anything.
+\end{block}
+
+\begin{block}<3->{Section of the bookstore}
+  \begin{itemize}
+    \item how to achieve wisdom/understanding/peace/fortune
+    \item tied to religion/spirituality/mysticism/faith
+  \end{itemize}
+\end{block}
+
+\begin{block}<4->{System of belief}
+  \begin{itemize}
+    \item my philosophy is...
+  \end{itemize}
+\end{block}
+
+\begin{block}<5->{Academic discipline}
+  \begin{itemize}
+    \item a field of inquiry
+    \item usually aligned with the humanities
+  \end{itemize}
+\end{block}
+
+\end{frame}
+\begin{frame}
+\frametitle{Defining a field of inquiry}
+\framesubtitle{In general}
+
+\begin{block}<2->{Subject matter}
+  \begin{itemize}
+    \item geography
+    \item baseball analyst
+  \end{itemize}
+\end{block}
+
+\begin{block}<3->{Purpose}
+  \begin{itemize}
+    \item repairman
+    \item legal adjudicator
+  \end{itemize}
+\end{block}
+
+\begin{block}<4->{Procedure}
+  \begin{itemize}
+    \item the game of baseball
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Defining a field of inquiry}
+\framesubtitle{Philosophy}
+
+\begin{block}<2->{Subject matter}
+  \begin{itemize}
+    \item epistemology (knowledge)
+    \item ethics (right action)
+  \end{itemize}
+\end{block}
+
+\begin{block}<3->{Purpose}
+  \begin{itemize}
+    \item discover truth
+    \item find peace of mind
+  \end{itemize}
+\end{block}
+
+\begin{block}<4->{Procedure}
+  \begin{itemize}
+    \item cooperative exchange of reasons for belief
+    \item objective, public standards of argumentation
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\section{Preview of next class}
+
+\begin{frame}
+\frametitle{Reason and argument}
+
+\begin{block}<2->{Varieties of reasons}
+  \begin{itemize}
+    \item epistemic v. pragmatic
+    \item explanatory v. justificatory
+    \item first blush v. all things considered
+  \end{itemize}
+\end{block}
+
+\begin{block}<3->{Arguments}
+  \begin{itemize}
+    \item what is a philosophical argument?
+    \item how do we recognize and construct one?
+    \item what kinds of argument are there?
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\end{document}

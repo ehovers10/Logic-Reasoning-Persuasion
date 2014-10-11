@@ -1,0 +1,362 @@
+\documentclass[10pt,letterpaper,xcolor=dvipsnames]{beamer}
+
+%\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{amssymb,mathabx}
+\usepackage{linguex}
+\usepackage{verbatim,enumerate,multirow}
+\usepackage{xcolor}
+%\usepackage{floatflt}
+
+\usepackage{pgfpages} % to put several slides on one page
+%\pgfpagesuselayout{4 on 1}[letterpaper, landscape, border shrink=5mm]
+
+\mode<article>{}
+
+%Template themes
+\usetheme{boxes}
+%\useoutertheme{miniframes}
+\useoutertheme{shadow}
+
+%Templates
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}[vertical]
+\setbeamertemplate{section in head/foot shaded}[default][20]
+\setbeamertemplate{title}
+
+\setbeamertemplate{headline}
+{
+	\begin{beamercolorbox}[ht=3ex,dp=1ex]{erikcolor1}
+		\insertshorttitle
+		%\insertsectionnavigationhorizontal{\textwidth}{}{}
+		%\usebeamerfont{title in head/foot}
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[ht=3ex,dp=2ex]{erikcolor2}
+	  \insertsectionnavigationhorizontal{\textwidth}{}{}
+		%\insertsubsectionnavigationhorizontal{\textwidth}{}{}
+		%\insertsubsection
+	\end{beamercolorbox}
+}
+\setbeamertemplate{footline}
+{
+	\begin{beamercolorbox}[ht=3ex,dp=1ex]{erikcolor1}
+		\insertshortinstitute[width=.33\textwidth,center] %$\triangleright$
+		\insertshortsubtitle[width=.33\textwidth,center] %$\triangleright$
+		\insertshortdate[width=.20\textwidth,center] %$\triangleright$
+		\hfill\insertframenumber\,/\,\inserttotalframenumber\;\;\;
+	\end{beamercolorbox}
+}
+
+%Font themes
+\usefonttheme{structuresmallcapsserif}
+%\usefonttheme[onlysmall]{structurebold}
+\usefonttheme{serif}
+
+%Color themes
+%\usecolortheme{beetle}
+%\usecolortheme{rose}
+
+%Head and foot lines colors
+\setbeamercolor{erikcolor1}{fg=white,bg=blue!70!green}
+\setbeamercolor{erikcolor2}{fg=white,bg=blue!60!green!10!white}
+
+%Titles color
+\setbeamercolor{frametitle}{fg=black,bg=green!30!blue!30!white}
+\setbeamercolor{title}{fg=black,bg=green!30!blue!30!white}
+
+%Block color
+\setbeamercolor{block title}{fg=white,bg=blue!70!green}
+\setbeamercolor{block body}{fg=black,bg=green!30!blue!30!white}
+
+%Background color
+\setbeamercolor{background canvas}{bg=}
+
+%Covered items color
+\setbeamercovered{transparent}
+
+\AtBeginSection[]
+{
+   \begin{frame}<beamer>
+       \frametitle{Lecture plan}
+       \tableofcontents[currentsection,currentsubsection]
+   \end{frame}
+}
+
+
+
+\title{Formal logic}
+\subtitle{the structure of reasoning}
+\author[Hoversten]{Erik Hoversten}
+\institute[lrp-f14]{Logic, reason, and persuasion: fall 2014 \\ Rutgers University}
+\date[09/29/2014]{September 29, 2014}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{What is formal logic?}
+
+\begin{frame}
+\frametitle{Arguments on different subjects}
+
+\begin{block}{Physics}
+  \begin{itemize}
+    \item Not both Supersymmetry and the Multiverse hypothesis can be correct.
+    \item So, we should develop tests to determine which one is wrong.
+  \end{itemize}
+\end{block}
+
+\begin{block}<2->{Politics}
+  \begin{itemize}
+    \item Neither Williams nor Hanson are viable candidates in this race.
+    \item So, the party will lose the seat with Williams, but they'll lose it with Hanson, too.
+  \end{itemize}
+\end{block}
+
+\begin{block}<3->{Gossip}
+  \begin{itemize}
+    \item Laura and Jerry don't both show up anywhere.
+    \item I saw Laura at the party last night, so you know Jerry was nowhere to be seen.
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Topic neutrality}
+
+\begin{block}{The arguments on the previous slide cover a variety of topics.}
+  \begin{itemize}
+    \item but they exhibit the same \textbf{logical structure}
+    \item we say that logic is \textbf{topic neutral} because it applies no matter what subject you are talking about.
+    \item Humans can reason about a wide variety of things, but our minds rely on a small set of \textbf{tools} that we apply to all these different things.
+  \end{itemize}
+\end{block}
+
+\begin{block}<2->{Formal logic}
+  \begin{itemize}
+    \item Formal logic investigates these tools of reasoning.
+    \item It looks only at the \textbf{logical structure} of propositions and arguments.
+    \item It ignores the specific content of the propositions involved in the argument.
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Abstraction}
+
+\begin{block}{Form}
+  \begin{itemize}
+    \item Topic neutrality means that the specific content of the propositions involved doesn't matter for the logic that is in play.
+    \item What matters is the structure (or form) of the argument.
+    \item Formal logic is the study of how different forms relate to each other. We will define \textit{validity} in these terms.
+  \end{itemize}
+\end{block}
+
+\begin{block}<2->{Replacement}
+  \begin{itemize}
+    \item We \textit{abstract} away from specifics by replacing the propositional \textit{content} with propositional \textbf{variables} ($A,B,C,\ldots$)
+    \item We just have to make sure that we use the same variable every time a particular proposition appears in the argument.
+    \item Then, we can treat as the same any argument that looks the same after this \textbf{replacement procedure}.
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{The structure of arguments}
+
+\begin{block}{Physics}
+  \begin{itemize}
+    \item \alert<2->{Not} \alert<4->{both} Supersymmetry \alert<4->{and} the Multiverse hypothesis can be correct.
+    \item So, we should develop tests to determine \alert<3->{which one} is \alert<2->{wrong}.
+  \end{itemize}
+\end{block}
+
+\begin{block}{Politics}
+  \begin{itemize}
+    \item \alert<2->{Neither} Williams \alert<2->{nor} Hanson are viable candidates in this race.
+    \item So, the party will lose the seat with Williams, \alert<4->{but} they'll lose it with Hanson, \alert<4->{too}.
+  \end{itemize}
+\end{block}
+
+\begin{block}{Gossip}
+  \begin{itemize}
+    \item Laura \alert<4->{and} Jerry \alert<2->{don't} \alert<4->{both} show up anywhere.
+    \item I saw Laura at the party last night, \alert<4->{so} you know Jerry was \alert<2->{nowhere} to be seen.
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Demorgan's rules}
+
+With some finagling, we can perform a replacement procedure on each of the arguments above to get one of the following argument structures.
+
+\begin{block}{DeMorgan's rule 1}
+  \begin{itemize}
+    \item not-( $A$ and $B$ )
+    \item $\therefore$, ( not-$A$ or not-$B$ )
+  \end{itemize}
+\end{block}
+
+\begin{block}<2->{DeMorgan's rule 2}
+  \begin{itemize}
+    \item not-( $A$ or $B$ ) 
+    \item $\therefore$, ( not-$A$ and not-$B$ )
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{The physics example}
+  
+  \begin{block}{Physics}
+  \begin{itemize}
+    \item \alert{Not} \alert{both} Supersymmetry \alert{and} the Multiverse hypothesis can be correct.
+    \item So, we should develop tests to determine \alert{which one} is \alert{wrong}.
+  \end{itemize}
+\end{block}
+
+  \begin{block}<2->{Adjusted}
+      \begin{itemize}
+    \item \alert{Not} (Supersymmetry is correct \alert{and} the Multiverse hypothesis is correct).
+    \item So, we should develop tests to determine: \alert{Not} Supersymmetry is correct \alert{or} \alert{not} the Multiverse hypothesis is correct.
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+%\begin{comment}
+\begin{frame}
+\frametitle{Replacement procedure}
+
+  \begin{block}{Variable assignment}
+    \begin{itemize}
+      \item Let $A$ stand for ``Supersymmetry is correct''
+      \item Let $B$ stand for ``the Multiverse hypothesis is correct''
+    \end{itemize}
+  \end{block}
+  
+  \begin{block}<2->{Replaced}
+    \begin{itemize}
+    \item Not ($A$ and $B$).
+    \item So, we should develop tests to determine: Not-$A$ or not-$B$.
+    \end{itemize}
+  \end{block}
+  
+\end{frame}
+%\end{comment}
+
+\begin{frame}
+  \frametitle{Logical systems}
+  
+  In addition to abstracting over whole propositions, we can also abstract over parts of propositions. What things we abstract over depends on the vocabulary of the particular logical system we are using.
+  
+  \begin{block}{Logical vocabulary}
+    \begin{itemize}
+      \item These are the topic neurtal bits that do the work in a logical system.  We don't abstract over these.
+      \item Propositional logic: $not$, $and$, $or$, $if\ldots then$
+    \end{itemize}
+  \end{block}
+  
+  \begin{block}<2->{Non-logical vocabulary}
+    \begin{itemize}
+      \item There are the topic specific bits.  They don't do any work in the logic, so we abstract over them.
+      \item Propositional logic: ``John went to the park'', ``Time is eternal'', ``Curling is boring''
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{Categorical logic}
+
+\begin{frame}
+  \frametitle{Categorical logic}
+  
+  \begin{block}{What's it about?}
+  \begin{itemize}
+    \item The first logical system that we are going to investigate in depth is called \textit{categorical logic}
+    \item It pertains to reasoning about \textbf{relations between classes} (groups) of individuals.
+    \item It was devised by Aristotle (and others) over 2000 years ago.
+    \item Logicians in the middle ages spent a lot of time categorizing and developing the rules of the logical system.
+    \item Comparison of classes is a basic tool used in reasoning, so the logic dedicated to it is still of great interest today.
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{The vocabulary}
+
+  \begin{block}{Logical vocabulary}
+    \begin{itemize}
+      \item Quantifiers: $all$, $some$, $no$
+      \item Copulas: $is$, $are$, $is not$, $are not$
+      \item Every categorical proposition contains one quantifier and one copula.
+    \end{itemize}
+  \end{block}
+  
+  \begin{block}<2->{Non-logical vocabulary}
+    \begin{itemize}
+      \item Subject terms: ``Americans'', ``Happy people'', ``Worms''
+      \item Predicate terms: ``greedy'', ``red'', ``go to Rutgers''
+      \item These terms all pick out a class (or group) of individuals.
+      \item Every categorical proposition contains one subject term and one predicate term.
+      \item The same word can often serve as either a subject term or a predicate term.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Proposition schema}
+  
+  Given the logical vocabulary of categorical logic, there are only 4 types of categorical proposition.  We call these types proposition \textbf{schema}.
+  
+  \begin{description}
+    \item[All S are P] the whole subject class is included in the predicate class.
+    \item[No S are P] the whole subject class is excluded from the predicate class.
+    \item[Some S are P] a part of the subject class is included in the predicate class.
+    \item[Some S are not P] a part of the subject class is excluded from the predicate class. 
+  \end{description}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Types of categorical proposition}
+  
+  Categorical propositions can be grouped on the basis of their \textbf{quality} and their \textbf{quantity}
+  
+  \begin{block}{Quality}
+    \begin{itemize}
+      \item This marks whether the proposition affirms or denies class membership.
+      \item Affirmative: ``All S are P'', ``Some S are P''
+      \item Negative: ``No S are P'', ``Some S are not P''
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Quantity}
+    \begin{itemize}
+      \item This marks whether the proposition is universal or existential.
+      \item Universal: ``All S are P'', ``No S are P''
+      \item Existential: ``Some S are P'', ``Some S are not P''
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{Next meeting}
+
+\begin{frame}
+  \frametitle{What's coming up?}
+  
+  \begin{itemize}
+    \item We'll continue investigating the properties of categorical logic.
+    \item We'll introduce some tools for evaluating inferences involving categorical propositions.
+    \item Relevant reading: \S\S4.3-4.5
+    \item HW \#2 is due at the beginning of class
+    \item HW \#1 will \textbf{definitely} be returned!
+  \end{itemize}
+\end{frame}
+
+\end{document}

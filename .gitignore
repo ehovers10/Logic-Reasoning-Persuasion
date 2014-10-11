@@ -1,0 +1,17 @@
+#Only save the .tex files
+
+*.aux
+*.tex.backup
+*.fls
+*.log
+*.nav
+*.out
+*.pdf
+*.toc
+*.snm
+*.fdb_latex
+*.syntex.gz
+
+#Ignore temp files
+
+*~
