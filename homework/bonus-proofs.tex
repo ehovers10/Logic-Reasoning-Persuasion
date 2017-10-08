@@ -1,129 +1,80 @@
 \documentclass[10pt]{article}
 
 \usepackage[letterpaper]{geometry}
-\usepackage{enumerate,verbatim,mdwlist,multirow}
+\usepackage{enumerate,verbatim,mdwlist}
 \usepackage{fancyhdr}
 \usepackage{linguex}
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
-\usepackage{multicol}
 
 %Packages needed for trees
 \usepackage{amsfonts,amsmath,amssymb}
 \usepackage[varg]{txfonts}
 \usepackage{qtree}
+\usepackage{multicol}
 
 %% Margin Setting
 \geometry{hmargin={.5in,.5in},vmargin={1in,1in}}
 \setlength{\parindent}{0.0in}
-\setlength{\parskip}{5mm}
+%\setlength{\parskip}{2mm}
 \setlength{\tabcolsep}{10pt}
-\setlength{\arraycolsep}{15pt}
-\setlength{\itemsep}{1cm}
+\setlength{\arraycolsep}{10pt}
 
 %% Header
-\setlength{\headheight}{23pt}
+\setlength{\headheight}{20.5pt}
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[L]{Phil 101, f14}
-\fancyhead[C]{Bonus on natural deduction}
-\fancyhead[R]{Due: Monday November 10, 2014}
+\fancyhead[L]{\small Phil 101, f14}
+\fancyhead[C]{\small Bonus on natural deduction}
+\fancyhead[R]{\small Due: Monday November 10, 2014 \\ Points possible: 10}
+\fancyfoot{}
 
 \begin{document}
 
 \small
 
-\textbf{Name:}\underline{  Answer Key  }
+\textbf{Name:}\underline{\hspace{2in}}
 
-\paragraph{Directions:} Construct complete proofs for the arguments below. Group 1 proofs are worth 3 points and should require around 5 lines to complete. Group 2 proofs are worth 3 points and should require around 6-7 lines to complete. Group 3 proofs are worth 4 points and should require around 11 lines to complete. You may submit up to 3 proofs for bonus credit.
+\paragraph{Directions:} Construct complete proofs for the arguments below. Proofs from \underline{Group 1} are worth \textbf{3 points} and should take you about 5 lines to complete. Proofs from \underline{Group 2} are worth \textbf{3 points} and should take you about 6-7 lines to complete.  Proofs from \underline{Group 3} are worth \textbf{4 points} and will take about 11 lines to complete. You may submit up to 3 proofs for bonus credit.
 
-\begin{multicols}{2}
 \paragraph{Group 1}
 
-\begin{enumerate}[A.]
-  \item $\begin{array}{lll}
-         1. & F \supset B & \\
-         2. & B \supset ( B \supset J ) & /\;\; F \supset J \\
-         3. & (B \bullet B) \supset J & Export. \;2 \\
-         4. & B \supset J & Taut. \;3 \\
-         5. & F \supset J & HS \; 1,4 \\
-        \end{array}$
-        
-  \item $\begin{array}{lll}
+\begin{enumerate}
+  \item \[\begin{array}{lll}
+         1. & F \supset G & \\
+         2. & B \supset ( B \supset J ) & / F \supset J \\
+        \end{array}\]
+  \item \[\begin{array}{lll}
          1. & M \supset ( U \supset H ) & \\
-         2. & (H \vee \sim\! U) \supset F & /\;\; M \supset F \\
-         3. & (\sim\!U \vee H) \supset F & Comm. \;2 \\
-         4. & (U \supset H) \supset F & Impl. \;3 \\
-         5. & M \supset F & HS \; 1,4
-        \end{array}$
+         2. & (H \vee \sim U) \supset F & / M \supset F \\
+        \end{array}\]
+
+\suspend{enumerate}
+
+\paragraph{Group 2} 
+
+\resume{enumerate}
+  \item \[\begin{array}{lll}
+         1. & F \supset G & \\
+         2. & B \supset ( B \supset J ) & / F \supset J \\
+        \end{array}\]
+  \item \[\begin{array}{lll}
+         1. & M \supset ( U \supset H ) & \\
+         2. & (H \vee \sim U) \supset F & / M \supset F \\
+        \end{array}\]
+\suspend{enumerate}
+
+
+\paragraph{Group 3} 
+
+\resume{enumerate}
+  \item \[\begin{array}{lll}
+         1. & F \supset G & \\
+         2. & B \supset ( B \supset J ) & / F \supset J \\
+        \end{array}\]
+  \item \[\begin{array}{lll}
+         1. & M \supset ( U \supset H ) & \\
+         2. & (H \vee \sim U) \supset F & / M \supset F \\
+        \end{array}\]
 \end{enumerate}
-
-\columnbreak
-
-\paragraph{Group 2}
-
-\begin{enumerate}[A.]
- \item $\begin{array}{lll}
-         1. & G \supset E & \\
-         2. & H \supset\; \sim\! E & /\;\; G \supset\; \sim\! H \\
-         3. & \sim\! H \vee \sim\! E & Impl. \;2 \\
-         4. & \sim\! E \vee \sim\! H & Comm. \;3 \\
-         5. & E \supset \sim\! H & Impl. \;4 \\
-         6. & G \supset \sim\! H & HS \;1,5 \\
-        \end{array}$
-        
- \vspace{1cm}
-        
- \item $\begin{array}{lll}
-         1. & S \vee \sim\! N & \\
-         2. & \sim\! S \vee Q & /\;\; N \supset Q \\
-         3. & \sim\! N \vee S & Comm. \;1 \\
-         4. & S \supset Q & Impl. \;2 \\
-         5. & N \supset S & Impl. \;3 \\
-         6. & N \supset Q & HS \;4,5 \\
-        \end{array}$
-\end{enumerate}
-
-\end{multicols}
-\hrule
-\vspace{5mm}
-
-\paragraph{Group 3}
-
-\begin{multicols}{2}
-
-\begin{enumerate}[A.]
- \item $\begin{array}{lll}
-         1. & I \vee (N \bullet F) & \\
-         2. & I \supset F & /\;\; F \\
-         3. & (N \bullet F) \vee I & Comm \;1 \\
-         4. & \sim\!\sim\!(N \bullet F) \vee I & DN \;3 \\
-         5. & \sim\!(N \bullet F) \supset I & Impl. \;4 \\
-         6. & \sim\!(N \bullet F) \supset F & HS \;2,4 \\
-         7. & \sim\!\sim\!(N \bullet F) \vee F & Impl. \;5 \\
-         8. & (N \bullet F) \vee F & DN \;7 \\
-         9. & F \vee (N \bullet F) & Comm. \;8 \\
-         10. & (F \vee N) \bullet (F \vee F) & Dist. \;9 \\
-         11. & F \vee F & Simp. \;10 \\
-         12. & F & Taut. \;11 \\
-        \end{array}$
-        
- \columnbreak
-        
- \item $\begin{array}{lll}
-         1. & (J \bullet R) \supset H & \\
-         2. & (R \supset H) \supset M & \\
-         3. & \sim\!(P\; \vee \sim\! J) & /\;\; M \bullet \sim\! P \\
-         4. & J \supset (R \supset H) & Export. \;1 \\
-         5. & J \supset M & HS \;4,2 \\
-         6. & \sim\! P \bullet J & DeM \;3 \\
-         7. & J \bullet \sim\! P & Comm \;6 \\
-         8. & \sim\! P & Simp. \;6 \\
-         9. & J & Simp. \;7 \\
-         10. & M & MP \;5,9 \\
-         11. & M \bullet \sim\! P & Conj. \;8,10 \\
-        \end{array}$
-\end{enumerate}
-
-\end{multicols}
 
 \end{document}
