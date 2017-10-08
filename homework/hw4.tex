@@ -1,0 +1,98 @@
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{enumerate,verbatim,mdwlist}
+\usepackage{fancyhdr}
+\usepackage{linguex}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+
+%Packages needed for trees
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[varg]{txfonts}
+\usepackage{qtree}
+\usepackage{multicol}
+
+%% Margin Setting
+\geometry{hmargin={.5in,.5in},vmargin={1in,1in}}
+\setlength{\parindent}{0.0in}
+%\setlength{\parskip}{2mm}
+\setlength{\tabcolsep}{10pt}
+\setlength{\arraycolsep}{10pt}
+
+%% Header
+\setlength{\headheight}{20.5pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\small Phil 101, f14}
+\fancyhead[C]{\small Homework \# 5}
+\fancyhead[R]{\small Due: Monday November 24, 2014 \\ Point total: 20 points}
+\fancyfoot{}
+
+\begin{document}
+
+\textbf{Name:}\underline{\hspace{2in}}
+
+\paragraph{Argument from analogy:} Consider the following argument from analogy.  For each of the facts that follow, first state what \textit{element} of the analogy the fact pertains to \textbf{(1 point each)}. The elements of every analogy are: \textit{primary analogue, secondary analogue, similarity, difference}, and the \textit{proposed property}. Based on the role the fact plays in the analogy, state whether the fact makes the analogy \textit{stronger}, \textit{weaker}, or whether it \textit{makes no difference} \textbf{(1 point each)}.
+
+\begin{quote}
+ Harold needs to have his rugs cleaned, and his friend Veronica reports that Ajax Carpet Service did an excellent job on her rugs. From this, Harold concludes that Ajax will do an equally good job on his rugs.
+\end{quote}
+
+\begin{enumerate}
+
+\item Veronica hired Ajax several times, and Ajax always did an excellent job.
+\item Veronica always had her rugs cleaned in mid-October, whereas Harold wants his done a week before Easter.
+\item Veronica's rugs had a few big stains on them before they were cleaned, and Harold's have only minor stains.
+\item Harold becomes less strict, and only demands that Ajax get his rugs approximately as clean as they got Veronica's.
+\item Harold reads 6 reviews of Ajax on Yelp, and all of them were very pleased with the service.
+
+\end{enumerate}
+
+\vspace{5cm}
+
+\paragraph{Theory of probability:} Consider the probability values below:
+
+\[P(A) = 1/3 \hspace{1cm} P(B) = 3/5 \hspace{1cm} P(A\; given\; B) = 3/7\]
+
+\begin{enumerate}
+ \item What does the fact that $P(A\; given\; B)$ is not zero mean about the relation between events $A$ and $B$? 
+ 
+ \item Calculate $P(A\; and\; B)$:
+ \item Calculate $P(A\; or\; not-B)$:
+ \item Calculate $P(B\; given\; A)$: (hint: use Bayes' rule)
+\end{enumerate}
+
+\paragraph{Bayes rule and evidence:} You devise an experiment to test hypothesis $H$. Prior to investigating more deeply, you believe $H$ to have a probability of $0.6$. The possible results of your experiment are evidence $E_1$, $E_2$, and $E_3$.  The probability that the 
+\resume{enumerate}
+\begin{multicols}{2}
+  \item $\sim\! A \supset (A \supset B)$ is \textbf{tautologous}.
+  
+  \item $\sim\!(A \vee B)$ and $(\sim\! A \;\bullet \sim\! B)$ are semantically \textbf{equivalent}. 
+\end{multicols}
+\suspend{enumerate}
+
+\vspace{3cm}
+
+\paragraph{Arguments in propositional logic:} State whether the following are \textit{valid} or \textit{invalid} \textbf{(1 point each)}. Justify your answer using an \textit{indirect} truth table \textbf{(3 points each)}.
+
+\resume{enumerate}
+\begin{multicols}{2}
+  \item \begin{enumerate}[(1)]
+         \item $A \supset B$
+         \item \underline{$\sim\! A$\hspace{1cm}}
+         \item $\sim\! B$
+        \end{enumerate}
+  
+  \item \begin{enumerate}[(1)]
+         \item $A$
+         \item \underline{$B \supset C$\hspace{1cm}}
+         \item $(B \supset C) \bullet A$
+        \end{enumerate}
+\end{multicols}   
+\end{enumerate}
+
+\vspace{4cm}
+  
+\paragraph{Bonus:}  Explain in 3-4 sentences how truth tables in propositional logic are similar to Venn diagrams in categorical logic. \textbf{(4 points)}
+
+\end{document}

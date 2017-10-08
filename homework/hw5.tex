@@ -1,0 +1,81 @@
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{enumerate,verbatim,mdwlist}
+\usepackage{fancyhdr}
+\usepackage{linguex}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+
+%Packages needed for trees
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[varg]{txfonts}
+\usepackage{qtree}
+\usepackage{multicol}
+
+%% Margin Setting
+\geometry{hmargin={.5in,.5in},vmargin={1in,1in}}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{3mm}
+\setlength{\tabcolsep}{10pt}
+\setlength{\arraycolsep}{10pt}
+
+%% Header
+\setlength{\headheight}{20.5pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\small Phil 101, f14}
+\fancyhead[C]{\small Homework \# 5}
+\fancyhead[R]{\small Due: Monday November 24, 2014 \\ Point total: 20 points}
+\fancyfoot{}
+
+%Compound events
+\newcommand\negate[1]{\mathop{\mbox{$not$-$#1$}}}
+\newcommand\disjoin[2]{\mathop{\mbox{$#1\; or\; #2$}}}
+\newcommand\conjoin[2]{\mathop{\mbox{$#1\; and\; #2$}}}
+\newcommand\given[2]{\mathop{\mbox{$#1\; given\; #2$}}}
+
+\begin{document}
+
+\textbf{Name:}\underline{  \textit{Answer Key}  }
+
+\paragraph{Argument from analogy:} Consider the following argument from analogy.  For each of the facts that follow, first state what \textit{element} of the analogy the fact pertains to \textbf{(1 point each)}. The elements of every analogy are: \textit{primary analogue, secondary analogue, similarity, difference}, and the \textit{proposed property}. Based on the role the fact plays in the analogy, state whether the fact makes the analogy \textit{stronger}, \textit{weaker}, or whether it \textit{makes no difference} \textbf{(1 point each)}.
+
+\begin{quote}
+ Harold needs to have his rugs cleaned, and his friend Veronica reports that Ajax Carpet Service did an excellent job on her rugs. From this, Harold concludes that Ajax will do an equally good job on his rugs.
+\end{quote}
+
+\begin{enumerate} \itemsep7mm
+
+\item Veronica hired Ajax several times, and Ajax always did an excellent job.
+
+\item Veronica always had her rugs cleaned in mid-October, whereas Harold wants his done a week before Easter.
+
+\item Veronica's rugs had a few big stains on them before they were cleaned, and Harold's have only minor stains.
+
+\item Harold becomes less strict, and only demands that Ajax get his rugs approximately as clean as they got Veronica's.
+
+\item Harold reads 6 reviews of Ajax on Yelp, and all of them were very pleased with the service.
+
+\suspend{enumerate}
+
+\paragraph{Theory of probability:} Consider the probability values: 
+
+\[P(A) = 1/3 \hspace{1cm} P(B) = 3/5  \hspace{1cm} P(A\; given\; B) = 3/7 \hspace{1cm} P(A\; given\; not-B) = 0\]
+
+\resume{enumerate} \itemsep7mm
+
+ \item What does the fact that $P(A\; given\; B)$ is not zero mean about the relation between events $A$ and $B$? \textbf{(2 points)}
+ 
+ \item Calculate $P(A\; and\; B)$ \textbf{(2 points)}:
+ 
+ \item Calculate $P(A\; or\; not-B)$ \textbf{(2 points)}:
+ 
+ \item Calculate $P(B\; given\; A)$ (hint: use Bayes' rule, \textbf{2 points}):
+ 
+ \item You devise an experiment to test hypothesis $H$. Prior to investigating more deeply, you believe $H$ to have a probability of $0.6$. The possible results of your experiment are evidence $E_1$, $E_2$, and $E_3$.  The probability that the result will be $E_1$ is $0.8$. And the likelihood of $E_1$ given $H$ is $0.75$.  You perform the experiment and the result is in fact $E_1$. Based on this information, use Bayes' rule to calculate the final probability of $H$ based on your experiment. \textbf{(2 points)}
+ 
+\end{enumerate}
+  
+\paragraph{Bonus:}  Explain what goes wrong when a person fails to include the \textbf{base rate} in their calculation of the probability of a hypothesis. \textbf{(3 points)}
+
+\end{document}
