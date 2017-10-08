@@ -1,0 +1,221 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{amssymb,enumerate}
+
+%Margin settings
+\usepackage{geometry}
+\geometry{hmargin={1in,1in},vmargin={1in,1in}}
+
+%Header settings
+\usepackage{fancyhdr}
+%\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{Phil 101, f14}
+\fancyhead[C]{The teleolgical argument}
+\fancyhead[R]{Hoversten}
+
+%Paragraph settings
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex plus .5ex minus .2ex}
+
+\begin{document}
+
+\section{The teleological argument}
+
+Imagine that you were walking along the shore, and you stubbed your toe on a rock. You may be a little bit annoyed, but you wouldn't think it was anything unusual.  Certainly, you wouldn't seriously ask how the rock got there on the beach. But imagine that instead of a rock, you were to stumble on a watch in the sand. In this situation, the circumstances are quite different, and you would rightfully wonder how the watch got to be there on the beach. 
+
+When you pick up and examine the watch, you would see intricately interwoven parts.  And the parts move around in a way that suggests they were put together with some purpose in mind.  And this purpose means the watch must have been designed by some watch maker.
+
+Well, isn't the world we inhabit a lot like the situation with the watch? When we sit and think about our existence, it seems to call out for an explanation. And when we examine the world closely, we see many intricately interwoven parts, which move around in ways that are very suggestive of having a purpose.  The natural conclusion is that, just like the watch, the world as a whole must have a designer.  To give it a name, we can call the designer ``God''.
+
+\subsection{An inductive argument}
+
+The story above contains an argument for the existence of God. It is known as he teleological argument, from the Greek word \textit{telos}, which means \textit{purpose}. The argument is also known as the \textit{argument from design}), and it is an inductive argument for the existence of God. The argument does not purport to provide \textit{conclusive} reason to believe in God.  Instead, it claims to give reason to believe that God \textit{probably} exists.
+
+\subsection{An argument from analogy}
+The particular form of the argument is one of an argument from analogy, which, as we've laready learned, has the following form:
+\begin{enumerate}
+ \item Object $x$ has properties $A$, $B$, and $C$.
+ \item Object $y$ has properties $A$ and $B$.
+ \item So, object $y$ probably has property $C$ as well.
+\end{enumerate}
+
+The basic principle behind the reasoning in an argument from analogy is that things that are similar in certain regards tend to be similar in other regards as well.  The analogy is strong to the extent that:
+\begin{itemize}
+ \item The number of observed properties the objects have in common is large.
+ \item The property that the objects are hypothesized to have in common is relevant to the other properties they share.
+ \item The number of objects observed to share the properties is large.
+\end{itemize}
+
+In the teleolgical argument, the analogy that is drawn is the following:
+\begin{enumerate}
+ \item Artifacts such as watches involve an \textit{intricacy of moving parts}, have an \textit{apparent function}, and also have a \textit{designer}.
+ \item The universe contains an intricacy of moving parts, many of which have an apparent function.
+ \item So, the universe probably has a designer as well.
+ \item This designer is God.
+\end{enumerate}
+
+\subsection{The strength of the argument}
+
+To assess the argument, we should ask whether the analogy is a strong one. 
+\begin{itemize}
+ \item The number of observed properties the objects have in common is 2: \textit{intricacy of moving parts} and \textit{apparent function}.
+ \item The property that the objects are hypothesized to have in common seems relevant to the other properties they share. The intricacy of moving parts and apparent function of artifacts is usually a direct result of their design.
+ \item The number of objects observed to share the properties is tough to judge.  There are lots of artifacts in the world, each of which has a designer.   The problem is that the secondary analogue in the analogy is the world as a whole. But we have only ever observed one world, so we don't have a directly observed primary analogue to compare it to.
+\end{itemize}
+
+Based on this assessment of the argument, it's difficult to say how strong it is. Certainly, if we are going to base our belief in God on such an argument, it would be nice to have a more explicit representation of the strength of the argument. For this, we turn to \textbf{probability theory}.
+
+\section{Using Bayes' theorem}
+
+When we reason about things that aren't certain, we form \textbf{hypotheses} and then conduct experiments to acquire \textbf{evidence} either for or against those hypotheses. Bayes' rule provides a system for calculating how we should change our belief in certain hypotheses based on evidence that we gather.
+
+\[\begin{array}{ccccc}
+final \; prob & & initial \; prob & & likelihood \\
+\overbrace{P(H\; given\; E)} & = & \overbrace{P(H)} & \times & \overbrace{P(E\; given\; H)} \\ \cline{3-5}
+ & & \multicolumn{3}{c}{\underbrace{P(E)}} \\
+ & & \multicolumn{3}{c}{evidence} \\
+  \end{array}\]
+  
+Each component of this formula plays a significant role in determining how evidence affects the probability of a hypothesis.
+
+\begin{itemize}
+ \item $P(H\; given\; E)$: This is known as the \textit{final probability}, and it is just what we are trying to determine. The \textit{given} connective in probability indicates the way in which one event \textbf{depends on} another.  What we're interested in figuring out is how our hypothesis depends on the evidence we receive, so this is just what we need.
+ 
+ \item $P(H)$: This is known as the \textit{prior probability}.  It measures how probable we take the hypothesis to be before we conduct any experiments.  If a hypothesis is really improbable to begin with, then even if we get some evidence for it, we might want to take that evidence with a grain of salt.  Neglecting to incorporate this starting probability in one's reasoning is known as the \textbf{base rate fallacy}.
+ 
+ \item $P(E\; given\; H)$: This is known as the \textit{likelihood} of the hypothesis, and it measures how well the hypothesis \textbf{explains} the evidence.  That is, if we were to suppose the hypothesis is true, would we expect to see the evidence that we do in fact see. If we get some evidence that doesn't match up with our hypothesis, then this should make us thinks something is wrong with the hypothesis.  
+ 
+ \item $P(E)$: This factor measures the impact of the evidence that we receive. If some evidence we get is very surprising, then that will impact our hypothesis much more than if the evidence we get is just what we expected all along.
+\end{itemize}
+
+\subsection{Determining the value of $P(E)$}
+
+In order to use Bayes' rule, we have to determine the value of each of the probability components it contains. Most of these will be given to us in the explanation of the problem, but $P(E)$ can be kind of confusing.  
+
+If we design an experiment ahead of time and then carry it out to see what results, we may have an idea of what the possible results could be and how probable each of them is.  When we know this, we can simply plug that value into Bayes' rule.
+
+But often, the precise value of $P(E)$ isn't known directly.  This could be the case when we are simply examining evidence that has already been collected.  In this case, we may not know what all the possible results were and how probable the result we got was.
+
+In this second kind of case, we can still get a sense of the value of $P(E)$ by calculating it on the basis of other information we have.  The key element that we need to do this is a list of all the \textbf{possible hypotheses} on the table.  The idea is that if we know all the possible hypotheses, then we know that one of them must be the correct one.  So, if we calculate how much the evidence impacts each individual hypothesis, and take a \textbf{disjunction} of all the hypotheses, then we have measured the total possible impact of the evidence.
+
+So, imagine that we have three possible hypotheses, and we know one of them is the correct one: $H_1$, $H_2$, or $H_3$. And we know that the evidence we collected is $E$.  Then we know that one of the following is true: $H_1\;and\; E$, $H_2\; and\; E$, or $H_3\; and\; E$. That's equivalent to the \textit{disjunction}:
+
+\[(H_1\;and\; E)\; or\; (H_2\; and\; E)\; or\; (H_3\; and\; E)\]
+
+This disjunction gives the impact of the evidence for each possible hypothesis, thus it constitutes the total evidence, and we can substitute it into the $P(E)$ component of Bayes' rule, giving us:
+
+\[\begin{array}{ccc}
+P(H\; given\; E) & = & P(H) \times P(E\; given\; H) \\ \cline{3-3}
+ & & P((H_1\;and\; E)\; or\; (H_2\; and\; E)\; or\; (H_3\; and\; E)) \\
+  \end{array}\]
+
+The probability of a disjunction is just the \textbf{sum} of the probabilities of the disjuncts. (Since the hypotheses are competing theories, they are independent of eachother.) This gives us:
+
+\[\begin{array}{ccc}
+P(H\; given\; E) & = & P(H) \times P(E\; given\; H) \\ \cline{3-3}
+ & & P(H_1\;and\; E)+ P(H_2\; and\; E)+ P(H_3\; and\; E) \\
+  \end{array}\]
+
+Since each of the hypotheses are \textbf{dependent} on the evidence, we use the general conjunction rule to determine the probability of each of disjuncts:
+
+\paragraph{Bayes' rule:} (with possible hypotheses $H_1$, $H_2$, $H_3$)
+\[\begin{array}{ccc}
+P(H_1\; given\; E) & = & P(H_1) \times P(E\; given\; H_1) \\ \cline{3-3}
+ & & P(H_1)\times P(E\;given\; H_1)+ P(H_2)\times P(E\;given\; H_2)+ P(H_3)\times P(E\;given\; H_3)) \\
+  \end{array}\]
+
+We then can use the information we have to fill in those values.
+
+\subsection{Application to the taxicab example}
+
+We are investingating a hit and run, and we have the following information:
+\begin{itemize}
+ \item On a misty night, a taxicab sideswiped a car and drove off.
+ \item There was a witness at the scene who tells us that the cab was blue.
+ \item Our town has two kinds of cab, blue ones and green ones.
+ \item The green ones make up 85\% of the cabs on the road, while the blue ones are 15\%.
+ \item We tested our witness under conditions similar to the night of the incident, and she correctly identified colors 80\% of the time.
+\end{itemize}
+
+We can use Bayes' rule to calculate the probability that the cab that hit the car was blue.
+\begin{itemize}
+ \item Hypothesis: The cab was blue (Blue)
+ \item Evidence: The witness says it was blue (Witness)
+ \item $P(Blue)=0.15$: prior to investigating, the cab only had a 15 chance of being blue.
+ \item $P(Witness\;given\;Blue)=0.8$: If the cab really was blue, we expect the witness to say it was blue 80\% of the time.
+ \item $P(Witness)=P(Blue)\times P(Witness\; given\; Blue)+ P(Green)\times P(Witness\; given\; Green)$
+ 	\begin{itemize}
+ 		\item Notice that I used the method above to calculate the value of $P(E)$
+ 		\item In this case there are only 2 possible hypotheses: that the cab was blue, and that the cab was green.
+ 		\item Using this method, we factor in the fact that the witnesses testimony could be misleading
+ 	\end{itemize}
+\end{itemize}
+
+\[\begin{array}{ccc}
+P(Blue\; given \; Witness) & = & P(Blue) \times P(Witness\; given\; Blue) \\ \cline{3-3}
+ & & P(Blue)\times P(Witness\; given\; Blue) + P(Green)\times P(Witness\; given\; Green)) \\
+ & = & 0.15 \times 0.8 \\ \cline{3-3}
+ & & (0.15\times 0.8)+ (0.85\times 0.2) \\
+ & = & 0.12 \\ \cline{3-3}
+ & & 0.12+ 0.17 \\
+ & \sim & 0.41 \\
+\end{array}\]
+
+So, even though the evidence we got was pretty strong, because the prior probability was so low, the final probability is still less than 50\%.
+
+
+\section{Application to the argument from design}
+Let's attempt to use Bayes' theorm to give us better insight into the strength of the teleological argument.  First, let's state our hypothesis and evidence.
+\begin{description}
+ \item [Hypothesis] God exists and designed the universe. (God)
+ \item [Evidence] The universe exhibits an intricacy of moving parts and apparent function. (Intricacy)
+\end{description}
+
+Next, we need to assign values to the different components of Bayes' theorem.  Unfortunately, we don't have any statistical data from which to draw these values.  However, we can assign some ballpark figures, and as we will see, we can learn something about the argument even if our values are mere educated guesses.
+\begin{description}
+ \item [P($God$)] We can assume that we are completely open on the question of whether God exists prior to encountering this argument.  If we are neutral either way, then the initial probability we assign to the hypothesis is 0.5
+ \item [P($Intricacy$ given $God$)] If God does exist, it makes sense that he would make his creation intricate and well-functioning. It's not necessary that he do so; he could be lazy or incompetent. But the hypothesis that God exists provides a pretty good explanation for why we see the intricacy and function that we do.  So, it seems safe to set the likelihood to a rather high value, say 0.9.
+ \item [P($Intricacy$)] In order to do this, we need to know what the possible hypotheses are.  One is just our hypothesis that God designed and created the world.  Paley thinks that the only alternative hypothesis is that the world arose as it is by \textbf{chance}.
+ 	\begin{itemize}
+ 		\item $P(God)\times P(Intricacy\; given \; God) + P(Chance)\times P(Intricacy\; given\; Chance)$
+ 		\item Since $God$ and $Chance$ are the only two hypotheses, we can set the prior probability for both at 0.5
+ 		\item It seems really unlikely that a world as complex and intricate as ours could arise by pure chance, so we'll set $P(Intricacy\; given\; chance)=0.1$
+ 	\end{itemize}
+\end{description}
+
+If we plug these values into Bayes' theorem, we get:
+
+\[\begin{array}{ccc}
+P(God\; given \; Intricacy) & = & P(God) \times P(Intricacy\; given\; God) \\ \cline{3-3}
+ & & P(God)\times P(Intricacy\; given \; God) + P(Chance)\times P(Intricacy\; given\; Chance) \\
+ & = & 0.5 \times 0.9 \\ \cline{3-3}
+ & & (0.5 \times 0.9) + (0.5 \times 0.1) \\
+ & \sim & 0.9 \\
+\end{array}\]
+
+Since the values we have used here are only approximations, we can't say anything definitive about the argument.  But there do seem to be a couple general lessons we can pull out from this exercise.
+\begin{itemize}
+ \item It is reasonable to assume that to rationally believe a proposition, it should have a probability of greater than 0.5. Thus, based on the numbers we have used, the teleological argument does indeed make it more probable that God exists and created the world.
+ \item But notice that the value we get is highly dependent on what \textbf{alternate hypotheses} there are.  If the only alternative is chance, then the God hypothesis comes out very strong. But if we were to factor in other hypotheses (such as the hypothesis that the intricacy of life that we see arose through evolution by natural selection), then the values would change drastically.
+\end{itemize}
+
+\section{The teleological argument as an abductive argument}
+The upshot of the last section is that what hypothesis regardings some date that we accept depends on what the other hypotheses are.  Thus, to assess the argument, we need a way to evaluate hypotheses.  \textbf{Abduction} is a form of reasoning that argues for a hypothesis based on the \textbf{best explanation} of the evidence at hand.
+
+If the hypothesis that God exists provides the \textbf{best explanation} of the intricacy and order of the universe, then perhaps we have good reason to believe that it is true. Of course, whether it is the best explanation depends on what other explanations are on offer.
+
+In Paley's time, the main competitor to the design hypothesis was the suggestion that everything we see in the world came together by a series of \textbf{random} occurrences. But if all that is at play in the universe is randomness, then we certainly wouldn't expect to see all the order and well-functioning that we do.  The hypothesis that God designed the world is much more likely.
+
+But since Paley's time, new rival hypotheses have been introduced.  One such hypothesis is the suggestion that life on Earth has \textbf{evolved} by a process of random variation and natural selection.  This hypothesis seems to make pretty good sense of the order and functioning of things in the world such as the human eye and plant and animal life.
+\begin{itemize}
+ \item In fact, the hypothesis of evolution may do a better job of explaining what we see in the world than the God hypothesis.  After all, there is a lot of imperfection in the way various lifeforms function (consider the thumb of the panda or the limitations to human vision).  
+ \item These imperfections make sense if evolution by natural selection is the source of the order in the universe. Since genetic changes take place by random variation, not everything will work together in perfect consort.
+ \item But it is less clear how well the God hypothesis explains these things.  Wouldn't we expect an all-powerful, all-intelligent creator to design the world without such glitches in the functioning?
+\end{itemize}
+
+Now, it isn't obvious which of these hypotheses better explains the data, but neither is it obvious that the hypothesis that God exists is the \textit{best} explanation. As a result, the teleological argument doesn't seem to give us as strong a reason to believe in God as Paley originally hoped.
+
+\end{document}

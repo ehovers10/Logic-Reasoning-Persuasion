@@ -1,0 +1,194 @@
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{enumerate,verbatim}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+
+%Packages needed for trees
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[varg]{txfonts}
+\usepackage{qtree}
+
+%% Margin Setting
+\geometry{hmargin={.5in,.5in},vmargin={1in,1in}}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{3mm}
+\setlength{\tabcolsep}{10pt}
+\setlength{\arraycolsep}{10pt}
+
+%% Header
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{Phil 101, f14}
+\fancyhead[C]{The problem of induction}
+\fancyhead[R]{Hoversten}
+
+\begin{document}
+
+\section{Justifications for kinds of ideas}
+
+\paragraph{Rationalism:} At least some ideas have as their ultimate source an action of the pure intellect--a judgment
+\begin{itemize}
+ \item Thus, at least some of our ideas may be independent of experience.
+\end{itemize}
+
+\paragraph{Empiricism:} All ideas have their ultimate source in some experience 
+\begin{itemize}
+ \item Motivation: Evidently, people who lack certain sensory faculties (blind or deaf people, for instance) also lack the ideas associated with those senses.  This fact suggests that the ideas really have experience as their source.
+ 
+ \item Consequence regarding complex ideas: Empiricism entails that every complex idea can be analyzed into a bunch of simpler ideas of which one has had direct experience.\footnote{Actually, Hume presents his own counterexample involving the ``missing shade of blue'', but he thinks that this is such a singular example that it doesn't undermine the general claim.}
+\end{itemize}
+
+\subsection{Paths to knowledge}
+
+\paragraph{Relations of ideas:} Ideas whose denial involves a contradiction
+\begin{itemize}
+ \item examples: ``$2+2=4$'', ``No object is both blue and red (all over at the same time''
+ \item a priori: These ideas can be seen to be true independently of experience.
+ \item no claim on the external world: Since they only relate ideas, these ideas don't tell us whether there is anything in the world outside our minds that corresponds to them.
+\end{itemize}
+
+\paragraph{Matters of fact:} Ideas whose denial involves no contradiction
+\begin{itemize}
+ \item examples: ``There is a table in front of me'', ``There is a white swan on the lake''
+ \item a posteriori: Since we can't know these ideas with certainty, we require experience to verify them.
+ \item involve a claim about the external world: These ideas are directly about things out in the world.
+\end{itemize}
+
+\paragraph{Causation:} ???
+\begin{itemize}
+ \item Example: I may claim to know that a friend of mine is in Oregon on the basis of a postcard I received from him postmarked in Oregon
+  \begin{itemize}
+   \item Not a relation of ideas: There's no contradiction in thinking my firend isn't in Oregon
+   \item Not a matter of fact: I don't have direct experience of my friend being in Oregon
+  \end{itemize}
+ \item relation between events: effect follows cause
+ \item based on past experience $+$ memory
+ \begin{itemize}
+   \item not a matter of fact: We never directly experience \textbf{the cause}, we only see the events following in succession
+   \item \textbf{constant conjunction}: in the past, events of type $C$ have always been followed by events of type $E$
+  \end{itemize}
+\end{itemize}
+
+\newpage
+
+\subsection{Justifying causal beliefs}
+
+\paragraph{Causal inferences:} \textit{If I release this piece of chalk, it will fall to the ground}
+\begin{enumerate}
+ \item In the past, events of chalk releasing have been constantly conjoined with events of chalk falling.
+ \item The future will be like the past.
+ \item So, if I release this piece of chalk, it will fall to the ground.
+\end{enumerate}
+
+\paragraph{Uniformity of nature:} The idea that the future will resemble the past
+\begin{itemize}
+  \item Not a relation of ideas: There's no contradiction in believing that there might be some miraculous event in which the future diverges from the past
+  \item Not a matter of fact: We never directly experience the future
+\end{itemize}
+ 
+\begin{enumerate}
+ \item In the past, future events have resembled past events.
+ \item The future will continue to be like the past.
+ \item So, the future will be like the past.
+\end{enumerate} 
+
+\section{Hume's problem of induction}
+
+\paragraph{Induction:} An argument that proceeds from a premise about observed facts to a conclusion about unobserved facts.
+
+\begin{center}
+\begin{tabular}{rl|crl}
+\multicolumn{2}{c}{\textbf{Inductive Argument}} & & \multicolumn{2}{c}{\textbf{Anit-inductive Argument}} \\
+1. & The last $10^9$ days, the sun has risen. & & 1'. & The last $10^9$ days, the sun has risen. \\
+2. & The pattern of laws is uniform. & & 2'. & Every $10^9$ days, the laws flip. \\
+3. & So, the sun will rise tomorrow. & & 3'. & So, the sun will not rise tomorrow. \\
+\end{tabular}
+\end{center}
+
+\subsection{What does it mean to trust our senses?} The two arguments above have exactly parallel structure. Each makes a prediction based on a store of evidence from our senses. But they come to the opposite conclusion. If we are genuinely to avoid paralysis in relying on our senses, we better come up with some way of deciding between these two arguments.  Clearly, the Inductive Argument is the one we use in practice. But what can the empiricist appeal to to justify the truth of (2) over (2')?
+\begin{itemize}
+ \item It doesn't seem that either (2) or (2') is \textit{contradictory}, so we can't appeal to their differing \textit{logical} status.
+ \item We may be inclined to suggest that (2) is better supported because we've never experienced the weird non-uniformity that (2') appeals to.  But notice that this is just to say that the world has always been uniform in the past, so it will probably be uniform in the furture. Thus, this suggestion appeals to the very principle we are trying to justify.
+\end{itemize}
+
+\subsection{Hume's skeptical solution}
+
+\paragraph{Habit:} Our psychological makeup is such that we are impulsively inclined to expect the future to resemble the past
+
+\paragraph{Justification vs. explanation:} This proposal explains why we tend to follow the inductive argument rather than the anti-inductive one, but it doesn't show that the inductive argument is better justified--or more rational.
+
+
+\section{The demarcation problem}
+Hume consigns inductive reasoning to the wastebasket of psychological habit.  But the problem is that \textit{all} inductive reasoning is equally impacted.  Thus, for example, \textbf{astronomy} and \textbf{astrology} are on equal footing as regards the predictions they make.  But surely some scientific theories are better than others, right?  Coming up with a viable way of making this distinction is \textbf{the demarcation problem}.
+
+\subsection{Science as induction}
+\begin{center}
+\begin{tabular}{ccccc}
+Observe & $\longrightarrow$ & Theorize & $\longrightarrow$ & Predict \\
+\end{tabular}
+\end{center}
+
+If this is our view of science, then the whole enterprise runs headlong into the problem of induction
+
+\subsection{Science as falsification}
+Karl Popper has suggested that the problem of induction cannot be solved.  Instead, the trick is to rethink the way science works.  He presents the following alternative model.
+\begin{center}
+\begin{tabular}{ccccc}
+Hypothesize & $\longrightarrow$ & Test & $\longrightarrow$ & Falsify \\
+\end{tabular}
+\end{center}
+
+\paragraph{Example:} Imagine that we go out one Friday and see 5 different swans, each of which is white. We then formulate the following hypotheses regarding swan color
+
+\begin{enumerate}[(H1)]
+ \item All swans are white
+ \item Every 6th swan is red, the rest are white
+ \item Swans viewed on Fridays are white, and swans viewed on other days are green
+\end{enumerate}
+
+We then devise and perform tests that distinguish these hypotheses.  
+\begin{itemize}
+ \item Never achieve proof: no matter how many tests we do, there will always be many hypotheses compatible with the data
+ \item But we can make progress: as we rule certain hypotheses out, our understanding of swans increases.
+\end{itemize}
+
+This approach allows us to distinguish between genuine and pseudo-science
+\begin{itemize}
+ \item If no possible test result could falsify the theory, then it is not a genuine science
+\end{itemize}
+
+
+\section{The Quine/Duhem thesis}
+Popper's thesis, known as \textbf{Falsificationism} has been greatly influential.  There's no doubt that it provides an interesting insight into the nature of scientific inquiry. Unfortunately, it can't be correct as it stands.  Notice that Popper's suggestion relies on the following assumption.
+
+\paragraph{Single hypothesis testing:} For any hypothesis proposed by a genuine science, a test can be devised for which a possible result would show the hypothesis to be false.
+
+Popper's idea is that if there is no way for a hypothesis to possibly be shown to be false, then it isn't genuinely scientific.  Unfortunately, this assumption renders all hypotheses unscientific.  The reason is that we never test hypotheses in isolation.
+
+\subsection{Hypotheses are always tested in bundles}
+
+To see the import of this thesis, consider the following example.  Imagine that you and I are arguing about whether the Earth is flat or round.  I claim that it is flat, and you that it is round.  Thus, we have the following hypotheses in isolation.
+
+\begin{enumerate}[(H1)]
+ \item The Earth is flat.
+ \item The Earth is round.
+\end{enumerate}
+
+To resolve the debate, we devise an experiment.  We will go to the shore and watch a ship sail off over the horizon.  If H1 is correct, then our prediction is that the ship will stay completely in sight and just get smaller as it sails away.  But if H2 is correct, then as the ship sails over the horizon, it will appear to disappear into the water.  The hull will go first, and eventually the sails will be the last to go.
+
+We perform the experiment, and we find that the ship disappears into the water with the sails the last to go.  You claim victory! But I say, ``Not so fast.  Our real debate is between the following two theories.''
+
+\begin{enumerate}[(T1)]
+ \item The Earth is flat, AND light waves travel in downward curving lines.
+ \item The Earth is round, AND light waves travel in straight lines.
+\end{enumerate}
+
+These elaborated theories both predict the results of our experiment.\footnote{If you're having trouble seeing this, it might help to draw a picture of how each theory imagines the experiment taking place.} The point is that I have saved my hypothesis from falsification by combining it with an \textbf{ancillary hypothesis}. The Quine/Duhem thesis maintains that for any experiment you devise, there is some ancillary hypothesis that I can add to my claim such that it makes the right prediction.
+
+The upshot is that we can't just rely on the results of scientific experiments to decide between conflicting theories.  As far as the experimental data is concerned, any single hypothesis is just as good as any other. Thus, we are still in need of an answer of the demarcation problem.
+
+It is at this point that Kitcher's explanation of \textbf{independent testability}, \textbf{unification}, and \textbf{fecundity} comes in.  His proposal is that while we can't distinguish independent hypotheses based on the data, we can evaluate whole theories based on these criteria.  What makes one theory better than another is that it meets these criteria to a greater extent.
+
+\end{document}

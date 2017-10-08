@@ -1,0 +1,191 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{amssymb,enumerate}
+
+%Margin settings
+\usepackage{geometry}
+\geometry{hmargin={1in,1in},vmargin={1in,1in}}
+
+%Header settings
+\usepackage{fancyhdr}
+%\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{Phil 101, f14}
+\fancyhead[C]{The language of probability}
+\fancyhead[R]{Hoversten}
+
+%Paragraph settings
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex plus .5ex minus .2ex}
+
+%Negation
+\newcommand\negate[1]{\mathop{\mbox{$not$-$#1$}}}
+\newcommand\disjoin[2]{\mathop{\mbox{$#1\; or\; #2$}}}
+\newcommand\conjoin[2]{\mathop{\mbox{$#1\; and\; #2$}}}
+\newcommand\given[2]{\mathop{\mbox{$#1\; given\; #2$}}}
+
+\begin{document}
+
+\section{Induction and probability}
+
+Induction is the method of reasoning whereby the premises of an argument purport to make the conclusion more \textbf{probable}.  The more probable the conclusion is on the basis of the argument, the \textbf{stronger} the argument is.  We have an intuitive idea of when an argument is strong or weak.  We also examined a number of fallacies that inductive arguments can commit.  But it would be nice to have a more rigorous way of assessing inductive arguments.  This is the role of the \textbf{theory of probability}.
+
+Just like \textit{categorical logic} or \textit{propositional logic}, probability theory is a formal logic.  Thus, we can define it in terms of the \textbf{language} we use to express it.  The only difference is that we will use the language of probability to help us assess inductive arguments as opposed to the deductive arguments we looked at with categorical and propositional logic.
+
+\section{The language of probability}
+
+As usual, all languages have 3 major components:
+\begin{itemize}
+	\item The \textbf{vocabulary}, which lists all the words the language uses.
+	\item The \textbf{syntax}, which gives rules for putting the words together into meaningful sentences.
+	\item The \textbf{semantics}, which assigns meanings to the sentences of the language.
+\end{itemize}
+
+The language of probability is no different, so we will define each of these components in turn.
+
+\subsection{Built off of arithmetic}
+
+Many languages incorporate vocabulary from other languages.  For instance, English has many words derived from Latin, French, and German languages. Probabilities are most often expressed as \textit{numbers}, and are related to each other in terms of arithmetic, so we need to oncorporate these elements into our language:
+\begin{itemize}
+	\item The \textbf{real numbers} from 0 to 1
+	\item The \textbf{addition} relation (+)
+	\item The \textbf{subtraction} relation (-)
+	\item The multiplication relation ($\times$)
+	\item The \textbf{division} relation ()
+\end{itemize}
+
+These elements will be used in the language of probability in the same way they are used for arithmetic.
+
+\subsection{Vocabulary}
+
+The first step in defining a language is to specify the vocabulary it uses.  In formal languages, we divide the vocabulary into a \textbf{logical} part and a \textbf{non-logical} part. The logical part makes the language unique and determines the syntax.  The non-logical part is the stuff the language is concerned with, and we \textit{abstract} over it.
+
+\subsubsection{Non-logical vocab}
+
+Probability has to do with measuring how likely it is that something will happen.  Things that happen are \textbf{events}. Events are actual if the do occur (such as World War II, or the SF Giants winning the 2014 World Series). Events are merely possible if they might have occurred, but they didn't (such as the KC Royals winning the 2014 World Series).
+
+The units to which we will assign probabilities in this language are events.  As usual, we abstract over the non-logical vocabulary by replacing specific events with the variables $A$, $B$, $C$, etc.
+
+\subsubsection{Logical vocab}
+
+Events come with certain probabilities.  They can also be combined together to make complex events.  The logical vocab accounts for these things.
+\begin{itemize}
+ \item \textbf{P(\underline{\hspace{5mm}})}: the probability operator. It translates ``The probability of \underline{\hspace{5mm}} is $\ldots$''
+ \item \textbf{not-}: the negation operator.
+ \item \textbf{and}: the conjunction operator.
+ \item \textbf{or}: the disjunction operator.
+ \item \textbf{given}: the conditional operator. It tells us how one event \textit{depends on} another one.
+\end{itemize}
+
+\subsection{Syntax}
+
+Armed with this vocabulary, we now need a set of rules for putting it together to make meaningful sentences.  In the language of probability, every sentence tells us the probability of some event. So, every sentence starts with the probability operator.  But the events inside the operator can be either simple or complex. The following are all the possible sentences of our language:
+\begin{itemize}
+ \item $P(A)$
+ \item $P(\negate{A})$
+ \item $P(\conjoin{A}{B})$
+ \item $P(\disjoin{A}{B})$
+ \item $P(\given{A}{B})$
+\end{itemize}
+
+\subsection{Semantics}
+
+If we want to use the language in any way, we need to know what the sentences mean.  In categorical logic, we specified the meaning of propositions in terms of \textit{class inclusion}.  In propositional logic, we specified meaning in terms of \textit{truth conditions}. We also need some sort of meaning specification for probability.
+
+There are multiple different ways of defining the semantics for probability theory.  These options are called \textbf{interpretations} of probability. Perhaps the most intuitive interpretation of probability, and the one we will focus on in this class defines probability in terms of \textbf{relative frequency}.
+
+The idea behind relative frequency is that events can be grouped together based on the kind of event they belong to.  The relative frequency of an event of type A is the number of events of type A \textit{out of} the total number of possible events.  That is:
+
+\begin{tabular}{ccc}
+ Relative frequency of A & = & Number of A events \\ \cline{3-3}
+ & & Number of total possible events \\
+\end{tabular}
+
+\subsubsection{Normality}
+
+Using relative frequency as a starting point for our semantics of probabiity imediately tells us something about the limits of probabilities.
+
+Since the denominator of the relative frequency fraction represents all possible events, the largest the fraction could be is if the numerator also represents all possible events.  In this case, the fraction would equal one.  Since the numerator and denominator both count out possible events, they will always be positive.  So, the smallest value the fraction could have is zero.
+
+Thus, we have the following \textbf{principle of normality}:
+
+\begin{quote}
+For all events $A$ (whether atomic or compound): $0\leq P(A) \leq 1$
+\end{quote}
+
+\subsubsection{Negation}
+
+From here, we can also define the meaning of $P(\negate{A})$. the negation \textit{not-A} represents just the possible events that aren't $A$ events.  That is: 
+
+\[Number\; of\; \negate{A}\; events = Number\; of\; possible\; events - Number\; of\; A\; events\]
+
+In terms of relative frequency, this means the meaning of negation is:
+
+\[P(\negate{A}) = 1 - P(A)\]
+
+\subsubsection{Disjunction}
+A \textit{disjunctive} event is just an event in which one or the other of two events occurs.  One may be interested in the probability of such an event when, for instance, we want to know how likely it is that we'll get a ride home from a party.  It doesn't matter which of our friends can drive, just as long as one of them can.
+
+In terms of relative frequency, the probability of a disjunctive event is just the \textbf{sum} of the probabilities of the individual events.
+
+\[P(\disjoin{A}{B}) = P(A) + P(B)\]
+
+But actually, this definition doesn't work universally.  Imagine that I want to know the probability of rolling either an even number or a number less that 4 on a standard 6 sided die.  Then our definition suggests that this is:
+
+\[P(\disjoin{Even}{<4}) = P(Even) + P(<4) = \frac{3}{6} + \frac{3}{6} = 1\]
+
+This can't be right, because this says that rolling an even number or a number less than 4 should be \textit{certain}, but obviously I could roll a 5.
+
+Let's expand the relative frequency out to see what has gone wrong.
+
+\[\frac{\disjoin{Even}{<4}}{1,2,3,4,5,6} = \frac{2,4,6,1,2,3}{1,2,3,4,5,6}\]
+
+The problem is that we've counted 2 twice in the numerator! This double counting gave us the wrong result.  To avoid double counting, we adjust the formula above to subtract out the events in which \textit{both} disjuncts occur.
+
+\[P(\disjoin{A}{B}) = P(A) + P(B) - P(\conjoin{A}{B})\]
+
+The issue here was that $A$ and $B$ are partially \textbf{dependent} on one another.  When two events are dependent, we must use the adjusted definition to factor out that dependence.
+
+\subsubsection{Conjunction}
+
+A conjunctive event is one in which two separate events occur simultaneously.  The probability of a conjunctive event occuring is much less than the probability of the two individual events occurring because it requires both of them to occur. In fact, the probability of a conjunctive event is just the \textbf{product} of the probabilities of the individual events.
+
+\[P(\conjoin{A}{B}) = P(A) \times P(B)\]
+
+But now consider our standard 6 sided die again.  What is the probability that I roll something that is both even and not 6?  According to our formula, we get:
+
+\[P(\conjoin{Even}{\negate{6}}) = P(Even)\times (1- P(6)) = \frac{3}{6} \times \frac{5}{6} = \frac{15}{36} =\frac{5}{12}\]
+
+But which rolls actually count as both even and less than 6? 2 and 4 are the qualifiers, which suggests that the probability should be $\frac{2}{6} = \frac{1}{3}$.  What went wrong? 
+
+Again, the issue has to do with \textbf{dependence}.  An roll can be both even and not 6, and we want to factor out this possibility in our calculation.  The way we do that is to use the adjusted formula:
+
+\[P(\conjoin{A}{B}) = P(A)\times P(\given{B}{A})\]
+
+\subsubsection{Conditional}
+
+The adjusted formula for disjunction includes a component that has $and$ in it.  And the adjusted formula for conjunction includes a component that has $given$ in it. This suggests that the role of $given$ is to account for the \textbf{dependence} between events.
+
+What the conditional $P(\given{A}{B})$ says is, ``Imagine that we \textit{assume} that event B occurs, what, then, is the probability of event A?''  This is basically equivalent to asking, to what extent does event $A$ depend on event $B$?
+
+The conditional is usually taken to be an \textit{undefined} value, determined, as values for the probability of atomic events are, by the basic semantics for probability.  But it can also be given a defined value as follows:
+
+\[P(\given{A}{B}) = \frac{P(\conjoin{A}{B})}{P(B)}\]
+
+\subsubsection{Bayes' rule}
+
+Thomas Bayes was a preist and a mathematician.  He discovered another way of explaining the notion of the probability of conditionals, which has come to be called \textit{Bayes' rule}, or \textit{Bayes' Theorem}. It is:
+
+\[P(\given{A}{B}) = \frac{P(A) \times P(\given{B}{A})}{P(B)}\]
+
+Notice that Bayes' rule can easily be derived from the definition of conditional probability that we specified above. 
+
+\[\begin{array}{ccc}
+P(\given{A}{B}) & = & \frac{P(\conjoin{A}{B})}{P(B)} \\
+ & = & \frac{P(A)\times P(\given{B}{A})}{P(B)} \\
+\end{array}
+\]
+
+\end{document}
