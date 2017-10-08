@@ -1,0 +1,350 @@
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{enumerate,verbatim,mdwlist}
+\usepackage{fancyhdr}
+\usepackage{linguex}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{multicol}
+
+%Packages needed for trees
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[varg]{txfonts}
+\usepackage{qtree}
+
+%% Margin Setting
+\geometry{hmargin={.5in,.5in},vmargin={1in,1in}}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{2mm}
+\setlength{\tabcolsep}{10pt}
+\setlength{\arraycolsep}{10pt}
+
+%% Header
+\setlength{\headheight}{23pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{Phil 101, f14}
+\fancyhead[C]{Final exam}
+\fancyhead[R]{Date: December 16, 2014 \\ Point total: 100 points}
+
+\newcommand\negate[1]{\mathop{\mbox{$not$-$#1$}}}
+\newcommand\disjoin[2]{\mathop{\mbox{$#1\; or\; #2$}}}
+\newcommand\conjoin[2]{\mathop{\mbox{$#1\; and\; #2$}}}
+\newcommand\given[2]{\mathop{\mbox{$#1\; given\; #2$}}}
+
+\begin{document}
+
+\small
+
+\textbf{Name:}\underline{\hspace{2in}}
+
+\paragraph{Concepts from the languages of propositional logic and probability theory}
+
+Fill in the blanks below with the concept that best matches the definition given. Draw your answers from the list of concepts provided. No concept gets used more than once, and some concepts will not be used at all. \textbf{(2 points each blank)}
+\begin{center}\textbf{Concepts:} \textit{recursion, valid, independence, contradiction, relative frequency, antecedent, truth conditions, disjunctive syllogism, event, consequent, tautology, equivalent, hypothetical syllogism.}\end{center}
+
+\begin{enumerate}\setlength\itemsep{5mm}
+ \item The property of a language in which larger WFFs can be built up from small ones without limit:\underline{\hspace{2in}}
+ 
+ \item A specification of all the possible ways that the parts of a WFF can be true or false:\underline{\hspace{2in}}
+ 
+ \item The proposition to the left of the horseshoe ($\supset$) in a conditional:\underline{\hspace{2in}}
+ 
+ \item The amount of times that an event of one type happens in relation to the number of possible events.\underline{\hspace{2in}}
+ 
+ \item A statement that cannot possibly be true:\underline{\hspace{2in}}
+ 
+ \item A series of steps whereby one demonstrates that a conclusion follows from some premises: \underline{\hspace{2in}}
+ 
+ \item A valid argument that involves reasoning by process of elimination:\underline{\hspace{2in}}
+ 
+ \item Two propositions that share the same truth value in every row of their truth tables:\underline{\hspace{2in}}
+ 
+\suspend{enumerate}
+
+Answer each of the following two questions in one or two sentences. (\textbf{3 points each})
+
+\resume{enumerate}\setlength\itemsep{1.5cm}
+
+\item What does it mean to say that two propositions are \textit{equivalent}?
+
+\item What is required for a deductive argument to be \textit{valid}?
+
+\suspend{enumerate}
+
+\vspace{.75cm}
+
+\paragraph{Truth tables}
+
+Construct and appropriately complete a truth table for each of the complex propositions below. \textbf{(3 points each)}
+
+\resume{enumerate}
+  \begin{multicols}{2}
+  \item $(A \bullet B) \supset (C \vee A)$
+  
+  \item $\sim\! F \equiv (A \bullet S)$
+  
+  \end{multicols}
+  \vspace{4cm}
+  
+\suspend{enumerate}
+
+\newpage
+
+For each of the statements below, state whether it is \textit{true} or \textit{false}. \textbf{(2 point each)} Construct a truth table to justify your answer.  You may construct either a complete truth table or an indirect truth table. \textbf{(2 points each)}
+
+\resume{enumerate}
+  \begin{multicols}{2}
+  \item $A \supset (B \bullet A)$ is a contradiction.
+  
+  \item $(F\; \vee \sim\! G) \supset (G \supset F)$ is a tautology.
+  \end{multicols}
+  \vspace{4cm}
+  
+  \begin{multicols}{2}
+  \item $\begin{array}{ll}
+         1. & H \vee (J \bullet M) \\
+         2. & \sim\! J \\ \cline{1-2}
+         3. & H \\
+        \end{array}$ is a valid argument.
+  
+  \item $\begin{array}{ll}
+         1. & L \supset K \\
+         2. & \sim\! N \vee K \\ \hline
+         3. & N \supset L \\
+        \end{array}$ is a valid argument.
+  
+  \end{multicols}
+  \vspace{4cm} 
+\suspend{enumerate}
+
+\paragraph{Natural deduction}
+
+For each of the partial proofs below, fill the blank with either the proposition that can be derived using the stated rule of inference or the rule of inference that is used to derive the stated proposition. \textbf{(2 points each)}
+
+\resume{enumerate}\setlength\itemsep{1cm}
+  \begin{multicols}{2}
+  \item $\begin{array}{llll}
+         1. & C \supset A & & \\
+         2. & A \supset D & & \\
+         3. & C \supset D & \underline{\hspace{3cm}} & 1,2 \\
+        \end{array}$
+  
+  \item $\begin{array}{llll}
+         1. & \sim\! B\; \bullet \sim\! G & & \\
+         2. & G \vee \sim\! B & \\
+         3. & \sim (B \vee G) & \underline{\hspace{3cm}} & 1 \\
+        \end{array}$
+        
+  \item $\begin{array}{llll}
+         1. & P \supset [Q \bullet (R \vee S)] & & \\
+         2. & \underline{\hspace{3cm}} & Dist. & 1 \\
+        \end{array}$
+
+  \item $\begin{array}{llll}
+         1. & F \supset G & & \\
+         2. & \sim\! G \\
+         3. & \underline{\hspace{3cm}} & Modus\; tollens & 1,2 \\
+        \end{array}$
+  \end{multicols}
+\suspend{enumerate}
+
+\vspace{.5cm}
+
+\paragraph{Analogy}
+
+The following story involves an argument from analogy.  For each of the facts that follow, choose from the options listed the one that best describes how the fact pertains to the analogy. (Some options may be used multiple times or not at all.) \textbf{(2 points each)}
+
+\begin{center}\textbf{Options:} \textit{number of primary analogues, diversity of primary analogues, number of similarities, relevance of similarities, nature of the difference, specificity of the proposed property} \end{center}
+
+\begin{quote}
+  Neil is looking to adopt a puppy, and he wants one that will be friendly around the children in his neighborhood. Neil's friend Stan has a cocker spaniel that is friendly around children.  Based on this, Neil concludes that a cocker spaniel puppy would make a good choice for adoption.
+\end{quote}
+
+\resume{enumerate}\setlength\itemsep{5mm}
+
+\item Neil will give his puppy special training, but Stan didn't train his dog at all.\underline{\hspace{5cm}}
+
+\item Bonnie, Edmund, and Chuck all have cocker spaniels that are friendly with children.\underline{\hspace{5cm}}
+
+\item Stan's dog wears a green collar, and Neil's will get a green collar, too. \underline{\hspace{5cm}}
+
+\item Bonnie, Edmund, and Chuck's cocker spaniels are all from the same litter.\underline{\hspace{5cm}}
+
+\item Neil decides that he doesn't need the puppy to be especially friendly as long as it at least tolerates children.\underline{\hspace{5cm}}
+
+\suspend{enumerate}
+
+\paragraph{Probability}
+
+Using the values provided, calculate the indicated probability. (\textbf{2 points each})
+
+\resume{enumerate}\setlength\itemsep{1.5cm}
+
+\item Let $P(M)=\frac{2}{5}$, $P(R)=\frac{5}{6}$, $P(\given{R}{M})=\frac{3}{8}$, and assume $R$ and $M$ are dependent events. 
+
+Calculate $P(\conjoin{M}{R})$. 
+
+\item Let $P(A)=\frac{1}{4}$, $P(D)=\frac{2}{3}$, $P(\conjoin{A}{\negate{D}})=\frac{1}{12}$, and assume $R$ and $M$ are dependent events. 
+
+Calculate $P(\disjoin{A}{\negate{D}})$.
+
+\suspend{enumerate}
+
+\vspace{.75cm}
+
+\paragraph{Bayes' rule}
+
+Answer the next two answers in one or two sentences. (\textbf{3 points each})
+
+\resume{enumerate}\setlength\itemsep{1.5cm}
+
+\item How does Bayes' rule help us avoid the \textit{base rate fallacy}?
+
+\item What does the value of the likelihood in Bayes' rule tell us?
+
+\suspend{enumerate}
+
+\vspace{1.5cm}
+
+You want to know why the dog keeps barking all night long. The barking is your evidence ($E$). You think one of the following is the explantion: \textit{there's some animal outside the kennel ($H_1$)} or \textit{there's a burglar attempting to break into the house ($H_2$)}.  You consider both hypotheses to explain the evidence well: $P(\given{E}{H_1})=P(\given{E}{H_2})=0.9$. As you lie in bed, you figure that you can assign the following prior probabilities: $P(H_1)=0.7$ and $P(H_2)=0.3$. 
+
+\resume{enumerate}
+
+\item Use Bayes' rule to calculate the probability that there is a burglar outside, given that your dog is barking. Show your work. (\textbf{3 points})
+
+\suspend{enumerate}
+
+\vspace{2cm}
+
+\paragraph{Decision theory}
+
+Your favorite band is coming to town and you really want to see the show. You're trying to decide whether to buy tickets online beforehand or to just pick them up at the door the night of. If you buy them at the door they are cheaper, but there's a chance they will sell out before the night of the show, in which case you won't get to see the band at all. Based on all this, you put together the following decision matrix:
+
+\begin{center}
+ \begin{tabular}{c|c|c|}
+ & Tix don't sell out & Tix sell out \\ \hline
+Buy online & -2 & +7 \\ \hline
+Buy at the door & +8 & -14 \\ \hline
+\end{tabular}
+\end{center}
+
+Use this decision matrix and the informaton provided to answer the questions below. Partial credit will be given if you show your work.
+
+\resume{enumerate}\setlength\itemsep{1.5cm}
+
+\item They're a somewhat obscure band, so you think the chance they sell out is no more than $30\%$. Calculate the expected utilities for buying the tickets online and for buying them at the door. (\textbf{3 points})\label{eus}
+
+\item Based on your calculation, what do you decide to do? (\textbf{2 point})
+
+\item You start to get worried that the show might sell out, and you change the probability of a sell out to $60\%$.  Does this affect your decision? Why or why not? (\textbf{2 points})\label{sellout} 
+
+\suspend{enumerate}
+
+\vspace{.75cm}
+
+\paragraph{Scientific reasoning}
+
+For each of the prompts that follow, circle the letter of the line that best completes the sentence. (\textbf{2 points each})
+
+\resume{enumerate}\setlength\itemsep{5mm}
+\begin{multicols}{2}
+\item Induction is a type of reasoning that involves 
+  \begin{enumerate}
+   \item ampliative reasoning.
+   \item a conclusion made more probable by the premises.
+   \item an inferential jump from the premises to the conclusion.
+   \item all of the above.
+  \end{enumerate}
+
+\item Ideas of the form \textit{event C caused event E} are
+  \begin{enumerate}
+   \item matters of fact.
+   \item relations between ideas.
+   \item neither (a) nor (b).
+  \end{enumerate}
+  
+\item If the problem of induction cannot be solved, then
+  \begin{enumerate}
+   \item we are still fully justified in using induction.
+   \item we can't know that induction works, \\ but we can still justifiably rely on it.
+   \item our use of induction has no justification whatsoever.
+   \item there is no problem because induction is very rarely used.
+  \end{enumerate}
+  
+\columnbreak
+  
+\item If a theory is not falsifiable, then
+  \begin{enumerate}
+   \item it is not precisely specified enough to be scientifically tested.
+   \item it is necessarily true.
+   \item it is pseudoscience.
+   \item both (a) and (c) are true.
+   \item all of the above.
+  \end{enumerate}
+  
+\item Theory $A$ is more simple than theory $B$ if
+  \begin{enumerate}
+   \item $A$ makes a lot of bold predictions.
+   \item $B$ applies to many more situations.
+   \item $A$ has fewer \textit{ancillary} hypotheses tacked onto it.
+   \item $A$ is empirically adequate.
+  \end{enumerate}
+  
+\item The Quine/Duhem thesis says that 
+  \begin{enumerate}
+   \item light travels in a downward curving arc.
+   \item theories are always tested in bundles.
+   \item induction is just a matter of habit.
+   \item the better theory is the one that gets the scientist the most grant money.
+  \end{enumerate}
+
+\end{multicols}
+
+\suspend{enumerate}
+
+Answer each of the following two questions in one or two sentences. (\textbf{3 points each})
+
+\resume{enumerate}\setlength\itemsep{2cm}
+\item What is the \textit{uniformity of nature} hypothesis?
+
+\item What is the \textit{demarcation problem}?
+
+\suspend{enumerate}
+
+\newpage
+
+\paragraph{Bonus:} The questions below are worth \textbf{3 bonus points} each.
+
+\resume{enumerate}\setlength\itemsep{3cm}
+
+  \item What are the three main components that need to be specified when we define a language, and what does each component do?
+
+  \item In no more than 3 sentences, describe how you think scientific reasoning works.
+
+  \item What topic from this course did you enjoy the most and what did you enjoy the least?
+\end{enumerate}
+
+\vspace{5cm}
+
+\paragraph{Rules for the probability calculus}
+
+\begin{enumerate}
+ \item $P(\disjoin{A}{\negate{A}})$
+ \item $P(\conjoin{A}{\negate{A}})$
+ \item $P(\conjoin{A}{B}) = P(A) \times P(B)$ \hspace{2cm} (When $A$ and $B$ are independent)
+ \item $P(\conjoin{A}{B}) = P(A) \times P(\given{B}{A})$
+ \item $P(\disjoin{A}{B}) =P(A) + P(B)$ \hspace{2cm} (When $A$ and $B$ are mutually exclusive)
+ \item $P(\disjoin{A}{B}) =P(A) + P(B) - P(\conjoin{A}{B})$
+ \item $P(A) = 1 -P(\negate{A})$
+\end{enumerate}
+
+\paragraph{Bayes' rule:}(with possible hypotheses $H_1$, $H_2$, $H_3$)
+
+$\begin{array}{ccc}
+P(H_1\; given\; E) & = & P(H_1) \times P(E\; given\; H_1) \\ \cline{3-3}
+ & & P(H_1)\times P(E\;given\; H_1)+ P(H_2)\times P(E\;given\; H_2)+ P(H_3)\times P(E\;given\; H_3) \\
+  \end{array}$
+
+
+\end{document}

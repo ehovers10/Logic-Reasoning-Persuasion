@@ -1,0 +1,147 @@
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{enumerate,verbatim,mdwlist}
+\usepackage{fancyhdr}
+\usepackage{linguex}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+
+%Packages needed for trees
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[varg]{txfonts}
+\usepackage{qtree}
+\usepackage{multicol}
+
+%% Margin Setting
+\geometry{hmargin={.5in,.5in},vmargin={1in,1in}}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{5mm}
+\setlength{\tabcolsep}{10pt}
+\setlength{\arraycolsep}{5pt}
+
+%% Header
+\setlength{\headheight}{20.5pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\small Phil 101, f14}
+\fancyhead[C]{\small Homework \# 4}
+\fancyhead[R]{\small Due: Monday November 3, 2014 \\ Point total: 20 points}
+\fancyfoot{}
+
+\begin{document}
+
+\small
+
+\textbf{Name:}\underline{  Answer Key  }
+
+\paragraph{Truth tables for complex propositions:} Construct a complete truth table for the complex propositions below. For full credit, you must show columns for all the intermediate WFFs in the proposition. \textbf{(3 points each)}
+
+\begin{enumerate}
+
+\begin{multicols}{2}
+ \item $(A \vee B) \bullet (A \;\vee \sim\! B)$
+ 
+ \[\begin{array}{cccccc}
+  A & B & \sim\! B & A \vee B & A \vee \sim\! B & (A \vee B) \bullet (A \vee \sim\! B) \\ \hline
+  T & T & F & T & T & T \\
+  T & F & T & T & T & T \\
+  F & T & F & T & F & F \\
+  F & F & T & F & T & F \\
+ \end{array}\]
+ 
+ \columnbreak
+ 
+ \item $A \supset [B \bullet (C \equiv D)]$
+ 
+  \[\begin{array}{ccccccc}
+  A & B & C & D & C \equiv D & B \bullet (C \equiv D) & A \supset [B \bullet (C \equiv D)] \\ \hline
+  T & T & T & T & T & T & T \\
+  T & T & T & F & F & F & F \\
+  T & T & F & T & F & F & F \\
+  T & T & F & F & T & T & T \\
+  T & F & T & T & T & F & F \\
+  T & F & T & F & F & F & F \\
+  T & F & F & T & F & F & F \\
+  T & F & F & F & T & F & F \\
+  F & T & T & T & T & T & T \\
+  F & T & T & F & F & F & T \\
+  F & T & F & T & F & F & T \\
+  F & T & F & F & T & T & T \\
+  F & F & T & T & T & F & T \\
+  F & F & T & F & F & F & T \\
+  F & F & F & T & F & F & T \\
+  F & F & F & F & T & F & T \\
+ \end{array}\]
+\end{multicols}
+\suspend{enumerate}
+
+\paragraph{Semantic properties of WFFs:} State whether the following are \textit{true} or \textit{false} \textbf{(1 point each)}. Justify your answer using a truth table \textbf{(2 points each)}.
+
+\resume{enumerate}
+\begin{multicols}{2}
+  \item $\sim\! A \supset (A \supset B)$ is \textbf{tautologous}.
+  
+  This statement is \textbf{true}.
+  
+ $\begin{array}{cc|c|ccc}
+  \sim & A & \supset & (A & \supset B) \\ \hline
+  F & T & T & T & T & T \\
+  F & T & T & T & F & F \\
+  T & F & T & F & T & T \\
+  T & F & T & F & T & F \\ \cline{3-3}
+ \end{array}$
+  
+  \item $\sim\!(A \vee B)$ and $(\sim\! A \;\bullet \sim\! B)$ are semantically \textbf{equivalent}. 
+  
+  This statement is \textbf{true}.
+  
+ $\begin{array}{|c|cccccc|c|cc}
+  \sim & (A & \vee & B) & :: & (\sim & A & \bullet & \sim & B) \\ \hline
+  F & T & T & T &  & F & T & F & F & T \\
+  F & T & T & F &  & F & T & F & T & F \\
+  F & F & T & T &  & T & F & F & F & T \\
+  T & F & F & F &  & T & F & T & T & F \\ \cline{1-1}\cline{8-8}
+ \end{array}$
+\end{multicols}
+\suspend{enumerate}
+
+\paragraph{Arguments in propositional logic:} State whether the following are \textit{valid} or \textit{invalid} \textbf{(1 point each)}. Justify your answer using an \textit{indirect} truth table \textbf{(3 points each)}.
+
+\resume{enumerate}
+\begin{multicols}{2}
+  \item \begin{enumerate}[(1)]
+         \item $A \supset B$
+         \item \underline{$\sim\! A$\hspace{1cm}}
+         \item $\sim\! B$
+        \end{enumerate}
+        
+ $\begin{array}{ccccccccc}
+  A & \supset & B & / & \sim & A & // & \sim & B \\ \hline
+  F & T & T &  & T & F &  & F & T \\
+ \end{array}$
+ 
+ This row is consistent, so the argument is \textbf{invalid}.
+ 
+ \columnbreak
+  
+  \item \begin{enumerate}[(1)]
+         \item $A$
+         \item \underline{$B \supset C$\hspace{1cm}}
+         \item $(B \supset C) \bullet A$
+        \end{enumerate}
+        
+  $\begin{array}{ccccccccccc}
+  A & / & B & \supset & C & // & (B & \supset & C) & \bullet & A \\ \hline
+  T & & & T & & & & F & & F & T \\
+ \end{array}$
+ 
+ This row assigns $B\supset C$ contradictory truth values, so the argument is \textbf{valid}.
+ 
+\end{multicols}   
+\end{enumerate}
+  
+\paragraph{Bonus:}  Explain in 3-4 sentences how truth tables in propositional logic are similar to Venn diagrams in categorical logic. \textbf{(4 points)}
+
+Truth tables provide a graphical representation of the meanings of propositions in propositional logic. Venn diagrams also provide graphical representations of the meanings of propositions in categorical logic.  These tools can also both be used to test the validity of arguments in each logic.
+
+\end{document}

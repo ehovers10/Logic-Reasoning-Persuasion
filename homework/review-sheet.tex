@@ -1,0 +1,231 @@
+\documentclass[10pt,landscape]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{enumerate,verbatim,mdwlist}
+\usepackage{fancyhdr}
+\usepackage{linguex}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{multicol}
+
+\setlength{\columnseprule}{.5pt}
+
+%Packages needed for trees
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[varg]{txfonts}
+\usepackage{qtree}
+
+%% Margin Setting
+\geometry{hmargin={.5in,.5in},vmargin={1in,1in}}
+\setlength{\parindent}{0.0in}
+%\setlength{\parskip}{3mm}
+\setlength{\tabcolsep}{10pt}
+\setlength{\arraycolsep}{10pt}
+
+%% Header
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{Phil 101, f14}
+\fancyhead[C]{Final exam review sheet}
+\fancyhead[R]{Exam date: December 16, 2014}
+
+\newcommand\negate[1]{\mathop{\mbox{$not$-$#1$}}}
+\newcommand\disjoin[2]{\mathop{\mbox{$#1\; or\; #2$}}}
+\newcommand\conjoin[2]{\mathop{\mbox{$#1\; and\; #2$}}}
+\newcommand\given[2]{\mathop{\mbox{$#1\; given\; #2$}}}
+
+\begin{document}
+
+\paragraph{Preparing for the final exam:} Below is an exhaustive list of the topics covered since the midterm exam.  Use this list to help organize your studying for the midterm.
+
+\vspace{3mm}
+
+You will be allowed to bring \textbf{one piece of paper} to the exam.  You can write whatever you want on this piece of paper.  Use it to jot down hard to remember distinctions or definitions.  You will be required to turn in your notes sheet with your completed exam. I will also provide you with some formulas relevant to the section on propositional logic and probability.  You will be given the complete list of rules of inference and rules of replacement as well as the formulas for calculating the probability of compound exents and Bayes' rule.
+
+\hrulefill
+
+\begin{multicols}{2}
+ 
+\paragraph{Propositional logic: language}
+  \begin{enumerate}
+   \item Vocabulary
+    \begin{itemize}
+     \item Non-logical: propositions
+     \item Logical: $\sim, \vee, \bullet, \supset, \equiv$
+    \end{itemize}
+   \item Syntax
+    \begin{enumerate}
+     \item Well-formed formulas
+     \item Basic WFFs: $A, \sim\! A, A \vee B, A \bullet B, A \supset B, A \equiv B$
+     \item Complex WFFs can be built up by \textbf{recursion}
+    \end{enumerate}
+   \item Semantics
+    \begin{enumerate}
+     \item Truth conditions
+     \item Each basic proposition is assigned a \textbf{truth table} that specifies all the possible ways that truth values can be assigned to the parts of the formula.
+    \end{enumerate}
+  \suspend{enumerate}
+  
+\paragraph{Propositional logic: truth tables}
+  \resume{enumerate}
+   \item Truth tables for complex propositions can be constructed using the truth tables for basic propositions.
+   \item Truth tables can be used to show certain properties of propositions:
+    \begin{enumerate}
+     \item Tautology
+     \item Contradiction
+     \item Equivalence
+     \item Consistency
+    \end{enumerate}
+   \item Truth tables can also be used to show whether arguments are valid
+    \begin{enumerate}
+     \item An argument is valid just in case all rows in which the premises are all true are such that the conclusion is also true.
+    \end{enumerate}
+   \item Indirect truth tables allow us to determine validity or properties of propositions without writing out the entire truth table.
+  \suspend{enumerate}
+  
+\paragraph{Propositional logic: natural deduction}
+  \resume{enumerate}
+   \item Natural deduction is a way of demonstrating the validity of arguments.
+   \item It involves constructing a \textbf{proof} that the conclusion follows from the premises.
+   \item A proof is a series of steps, each of which involves a proposition whose truth is justified by a rule of propositional logic
+   \item Rules of replacement
+    \begin{enumerate}
+     \item We can use truth tables to show that certain propositions are equivalent to each other.
+     \item Since they are equivalent, they can be switched in and out without changing the meaning.
+     \item Whenever a proof contains one of the propositions, a step can be added in which we replace it with its equivalent proposition.
+     \item You should know how to use the rules of replacement
+    \end{enumerate}
+   \item Rules of inference
+    \begin{enumerate}
+     \item Rules of inference are mini-arguments
+     \item We can use truth tables to show that these arguments are valid.
+     \item Once we know they are valid, we can use them in proofs for free.
+     \item If a proof contains all the premises of the rule of inference, a step can be added in which we write down the conclusion of the rule of inference.
+     \item You should know how to use the rules of inference
+    \end{enumerate}
+  \suspend{enumerate}
+  
+\paragraph{Analogy}
+  \resume{enumerate}
+    \item Analogy is a form of inductive reasoning in which we compare different things to eachother.
+    \item Parts of analogy
+      \begin{enumerate}
+       \item Primary analogues
+       \item Secondary analogue
+       \item Similarities
+       \item Differences
+       \item Proposed property that the analogues have in common
+      \end{enumerate}
+    \item Evaluating an analogy
+      \begin{enumerate}
+       \item Number of primary analogues
+       \item Diversity of primary analogues
+       \item Number of similarities
+       \item Relevance of similarities
+       \item Nature of the differences
+       \item Specificity of the conclusion (proposed property)
+      \end{enumerate}
+  \suspend{enumerate}
+  
+\paragraph{Probability: language}
+    \begin{enumerate}
+   \item Vocabulary
+    \begin{enumerate}
+     \item Non-logical: events
+     \item Logical: $P(-)$, \textit{not-, and, or, given}
+    \end{enumerate}
+   \item Syntax
+    \begin{enumerate}
+     \item $P(A), P(\negate{A}), P(\conjoin{A}{B}), P(\disjoin{A}{B}), P(\given{A}{B})$
+    \end{enumerate}
+   \item Semantics
+    \begin{enumerate}
+     \item Based on the notion of \textit{relative frequency}
+     \item $P(\negate{A}) = 1 - P(A)$
+     \item If $A$ and $B$ are independent: $P(\conjoin{A}{B}) = P(A)\times P(B)$
+     \item If $A$ and $B$ are dependent: $P(\conjoin{A}{B}) = P(A)\times P(\given{B}{A})$
+     \item If $A$ and $B$ are independent: $P(\disjoin{A}{B}) = P(A)+ P(B)$
+     \item If $A$ and $B$ are dependent: $P(\disjoin{A}{B}) = P(A)+ P(B) - P(\conjoin{A}{B})$
+     \item $P(\given{A}{B}) = \frac{P(A)\times P(B)}{P{B}}$
+    \end{enumerate}
+\suspend{enumerate}
+
+\paragraph{Probability: Bayes' rule}
+  \resume{enumerate}
+    \item Definitions
+          \begin{enumerate}
+     \item If $P(B)$ is known: $P(\given{A}{B}=\frac{P{A}\times P(\given{B}{A})}{P(B)}$
+     \item If $P(B)$ is not known, but we know that either $A_1$ or $A_2$: $P(\given{A_1}{B}=\frac{P{A_1}\times P(\given{B}{A})}{P(A_1)\times P(\given{B}{A_1})+P(A_2)\times P(\given{B}{A_2})}$
+    \end{enumerate}
+    \item Bayes' rule can be used to calculate how evidence impacts the probability of a hypothesis.
+    \item Components of Bayes' rule
+      \begin{enumerate}
+       \item Final probability
+       \item Initial probability
+       \item Likelihood
+       \item Total evidence
+      \end{enumerate}
+    \item What is the base rate fallacy?
+    \item Whether evidence supports a hypothesis also depends on what the alternative hypotheses are.
+    \item As a case study of this idea, we looked at the teleological argument (argument from design) as an argument that God exists and created our world.
+  \suspend{enumerate}
+
+\paragraph{Probability: decision theory}
+  \resume{enumerate}
+    \item Cost/benefit analysis is a form of inductive reasoning in which we weigh the possible results of different actions against each other to determine how we should act.
+    \item Components:
+      \begin{enumerate}
+       \item Various actions
+       \item List of consequences of each action
+	\begin{enumerate}
+	 \item We adjust the lists based on how significant (positive or negative) the consequences are.
+	 \item We also adjust the list based on how probable the possible consequences are.
+	\end{enumerate}
+       \item Compare the adjusted list
+       \item Choose the action whose list has the better total consequences
+      \end{enumerate}
+    \item A tool for compiling all of these components is the \textbf{decision matrix}
+    \item Once the decision matrix is completed, we can plug the values into the \textbf{expected utility} formula to determine which action is the better one.
+    \item Even if we can't be certain about the specific values, we may be able to get some general information about how different actions relate to eachother.
+    \item As a case study of this idea, we looked at Pascal's Wager as an argument that we ought to believe in god.
+  \suspend{enumerate}
+  
+\paragraph{Problem of induction}
+  \resume{enumerate}
+    \item Induction involves ampliative reasoning, which means there is a bit of a jump from the premises to the conclusion.
+    \item Is induction in general justified?
+      \begin{enumerate}
+       \item Relations between ideas are justified because their negation is contradictory.
+       \item Matters of fact ar justified by our experience of them.
+       \item But causal ideas are neither relations between ideas nor matters of fact.
+       \item Causal ideas seem to rely on the idea of the \textbf{uniformity of nature}
+       \item But the uniformity of nature idea can only be justified by relying on the uniformity of nature, and that is \textbf{circular} reasoning.
+      \end{enumerate}
+
+    \suspend{enumerate}
+      
+\paragraph{Scientific reasoning}
+   \resume{enumerate}
+    \item If induction cannot be justified, we still want to distinguish good Scientific hypotheses from pseudoscience. This is known as the \textbf{demarcation} problem.
+    \item Science as induction: Observe $\rightarrow$ Theorize $\rightarrow$ Predict
+    \begin{enumerate}
+    \item This model of science succumbs to the problem of induction
+    \end{enumerate}
+    \item Falsification: Theorize $\rightarrow$ Test $\rightarrow$ Falsify
+    \begin{enumerate}
+    \item This model works around the problem of induction
+    \item But it means we can never say a theory is true; we can only say it has yet to be falsified.
+    \item This model also runs into the problem of the Quine-Duhem Thesis: hypotheses are always tested in bundles.
+    \end{enumerate}
+    \item Science involves more than just testing theories experimentally
+    \item It also compares theories based on \textbf{theoretical virtues}
+      \begin{enumerate}
+       \item Simplicity
+       \item Striking predictions
+       \item Scientific progress
+      \end{enumerate}
+      \end{enumerate}
+
+\end{multicols}
+
+\end{document}

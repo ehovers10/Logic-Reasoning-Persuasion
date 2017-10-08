@@ -1,0 +1,231 @@
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{enumerate,verbatim,mdwlist,multirow}
+\usepackage{fancyhdr}
+\usepackage{linguex}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{multicol}
+
+%Packages needed for trees
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[varg]{txfonts}
+\usepackage{qtree}
+
+\include{tikz-venn-diagrams}
+
+%% Margin Setting
+\geometry{hmargin={.5in,.5in},vmargin={1in,1in}}
+\setlength{\parindent}{0.0in}
+%\setlength{\parskip}{2mm}
+\setlength{\tabcolsep}{10pt}
+\setlength{\arraycolsep}{10pt}
+
+%% Header
+\setlength{\headheight}{23pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{Phil 101, f14}
+\fancyhead[C]{Homework \# 3}
+\fancyhead[R]{Due: Wednesday October 15, 2014 \\ Point total: 20 points}
+
+\begin{document}
+
+\small
+
+\textbf{Name:}\underline{  Answer Key  }
+
+\paragraph{The language of categorical logic}
+
+\begin{enumerate}
+ \item What is the primary difference between the \textbf{Boolean} and \textbf{Aristotelian} perspectives on categorical logic? \textbf{(1 point)}
+ 
+ \begin{quote}
+  \textit{The Boolean perspective denies that universal propositions have existential import, whereas the Aristotelian perspective demands that they do.}
+ \end{quote}
+
+\suspend{enumerate}
+
+\vspace{.5cm}
+
+\paragraph{Syntactic relations}
+
+\resume{enumerate}
+  \item Write the converse of \textit{Some A are non-B}: \underline{  \textit{Some non-B are A}  } \textbf{(1 point)}
+  
+  \item Write the obverse of \textit{No Q are S}: \underline{  \textit{All Q are non-S}  } \textbf{(1 point)}
+  
+  \item Write the contraposition of \textit{Some non-M are not N}: \underline{  \textit{Some non-N are not M}  } \textbf{(1 point)}
+\suspend{enumerate}
+
+\paragraph{Semantic relations}
+
+\resume{enumerate}
+  \item Assume that \textit{All A are B} is true. 
+  
+  Then the truth value of \textit{No A are B} is: \hspace{1cm} True \hspace{1cm} \tikz \node [draw, ellipse] {False}; \hspace{1cm} Undetermined \hspace{1cm} \textbf{(circle one, 1 point)} \\
+  
+  The relation that allows us to make that claim is: \underline{  \textit{Contrary}  } \textbf{(1 point)}
+  
+  \item Assume that \textit{Some F are G} is false. 
+  
+  Then the truth value of \textit{All F are G} is: \hspace{1cm} True \hspace{1cm} \tikz \node [draw, ellipse] {False}; \hspace{1cm} Undetermined \hspace{1cm} \textbf{(circle one, 1 point)} \\
+  
+  The relation that allows us to make that claim is: \underline{  \textit{Subalternation}  } \textbf{(1 point)}
+  
+\suspend{enumerate}
+
+\paragraph{Direct inferences}
+
+\resume{enumerate}
+  \item Assume the \textbf{Boolean perspective}, and consider the direct inference: \textit{Some W are not X}. Therefore, it is false that \textit{no W are X}.
+  
+  \vspace{3mm}
+  
+  This inference is: \hspace{1cm} Valid \hspace{1cm} \tikz \node [draw, ellipse] {Invalid}; \hspace{1cm} Conditionally valid \hspace{1cm} \textbf{(circle one, 1 point)}
+  
+  \vspace{3mm}
+  
+  Justify your answer in the space below.  You may use either method for assessing the validity of direct inferences. \textbf{(2 points)}
+  
+  \paragraph{Method \#1:} First, we translate the conclusion using the contradictory relation from the square of opposition. This gives us: 
+  
+  \textit{It is false that no W are X} $\rightarrow$ \textit{Some W are x}.
+  
+  Then, we construct venn diagrams for each of the propositions:
+  
+  \begin{center}
+  \begin{tikzpicture}
+   \catvenn{y}{Some}{not}{}{W}{}{X}
+   \draw (0,-1.25cm) node {Premise};
+   \begin{scope}[shift={(6cm,0)}]
+    \catvenn{y}{Some}{}{}{W}{}{X}
+    \draw (0,-1.25cm) node {Conclusion};
+   \end{scope}
+  \end{tikzpicture}
+  \end{center}
+
+  Based on these diagrams, it is clear that the conclusion says something that the premise does not.  Thus, the inference is \textit{invalid}.
+  
+  \paragraph{Method \#2:} First, we check the square of opposition to determine what relation the two propositions stand in.  Since we are in the Boolean perspective, we use the modern square. \textit{Some-not} and \textit{No} are on the right side of the square, which means the relation between them is \textit{undetermined}.  Thus, we can't say anything about the truth value of one given that of the other, and the inference is \textit{invalid}.
+  
+  \newpage
+  
+  \item Assume the \textbf{Aristotelian perspective}, and consider the direct inference: It is false that \textit{some R are S}. Therefore, it is false that \textit{All R are S}.
+  
+  \vspace{3mm}
+  
+  This inference is: \hspace{1cm} Valid \hspace{1cm} Invalid \hspace{1cm} \tikz \node [draw, ellipse] {Conditionally valid}; \hspace{1cm} \textbf{(circle one, 1 point)}
+  
+  \vspace{3mm}
+  
+  Justify your answer in the space below.  You may use either method for assessing the validity of direct inferences. \textbf{(2 points)}
+  
+  \paragraph{Method \#1:} First, we translate both propositions using the contradictory relation from the square of opposition. This gives us: 
+  
+  \textit{It is false that some R are S} $\rightarrow$ \textit{No R are S}, and 
+  
+  \textit{It is false that all R are S} $\rightarrow$ \textit{Some R are not S}.
+  
+  Then, we construct venn diagrams for each of the propositions:
+  
+  \begin{center}
+  \begin{tikzpicture}
+   \catvenn{y}{No}{}{}{R}{}{S}
+   \xSonlyA
+   \draw (0,-1.25cm) node {Premise};
+   \begin{scope}[shift={(6cm,0)}]
+    \catvenn{y}{Some}{not}{}{R}{}{S}
+    \draw (0,-1.25cm) node {Conclusion};
+   \end{scope}
+  \end{tikzpicture}
+  \end{center}
+
+  Notice that the diagram for the premise includes an \tikz \node [draw, rounded corners] {X}; because we are working in the Aristotelian perspective. Based on these diagrams, the conclusion doesn't say anything that the premise does not already say.  Thus, the inference is valid. But because of the existential import, we say that the inference is \textit{conditionally valid}.
+  
+  \paragraph{Method \#2:} First, we check the square of opposition to determine what relation the two propositions stand in.  Since we are in the Aristotelian perspective, we use the traditional square. \textit{Some} and \textit{All} are on the left side of the square, which means the relation between them is \textit{subalternation}.  Thus, we know that falsity flows upward. Since our premise is on the bottom, and it is said to be false, we know that the conclusion must also be false, which is jsut what it says.  Thus, the inference is valid. But since we're in the Aristotelian perspective we qualify this and call it \textit{conditionally valid}.
+  
+\suspend{enumerate}
+
+\paragraph{Syllogisms}
+
+\resume{enumerate}
+  \item Consider the syllogism:
+    \begin{enumerate}[1)]
+     \item All P are M
+     \item All M are S
+     \item $\therefore,$ some S are P
+    \end{enumerate}
+
+    This syllogism is: \hspace{1cm} Valid \hspace{1cm} Invalid \hspace{1cm} \tikz \node [draw, ellipse] {Conditionally valid}; \hspace{1cm} \textbf{(circle one, 1 point)}
+    
+    \vspace{3mm}
+    
+    Justify your answer using the Venn diagram below \textbf{(2 points)}
+    
+    \begin{multicols}{2}
+    \begin{center}
+    \begin{tikzpicture}
+     \sylluniv{All}{P}{M}
+     \xSPMA
+     \sylluniv{All}{M}{S}
+     \ecommit{All}{M}{S}
+     \syllbox{S}{P}{M}
+    \end{tikzpicture}
+    
+      The conclusion says that there is an X in the very middle section. The premises already say this, but they say so on the basis of existential commitment.  So, this argument is conditionally valid.
+    \end{center}
+    \end{multicols}
+    
+    \newpage
+
+  \item Consider the syllogism:
+    \begin{enumerate}[1)]
+     \item Some M are P
+     \item No S are M
+     \item $\therefore,$ \textcolor{red}{some S are not P}
+    \end{enumerate}
+
+    This syllogism is: \hspace{1cm} Valid \hspace{1cm} \tikz \node [draw, ellipse] {Invalid}; \hspace{1cm} Conditionally valid \hspace{1cm} \textbf{(circle one, 1 point)}
+    
+    \vspace{3mm}
+    
+    Justify your answer using the Venn diagram below \textbf{(2 points)}
+    
+    \begin{multicols}{2}
+    \begin{center}
+    \begin{tikzpicture}
+     \sylluniv{No}{S}{M}
+     \ecommit{No}{S}{M}
+     \xPM
+     \begin{scope}[color=red]
+      \xSonly
+     \end{scope}
+     \syllbox{S}{P}{M}
+    \end{tikzpicture}
+    
+    The conclusion says there is an X in the section that is S only, but the premises don't also say that.  So this argument is invalid.
+    \end{center}
+    \end{multicols}
+  
+\end{enumerate}
+  
+\paragraph{Bonus:}  Demonstrate the fact that \textit{All Y are Z} and its obverse always have the same truth value. \textbf{(3 points)}
+
+\vspace{.5cm}
+
+The obverse of \textit{All Y are Z} is \textit{No Y are non-Z}.  To show that these always have the same truth value, it is enough to show that their Venn diagrams are identical.  
+
+\begin{center}
+ \begin{tikzpicture}
+  \catvenn{y}{All}{}{}{Y}{}{Z}
+  \begin{scope}[shift={(6cm,0)}]
+   \catvenn{y}{No}{}{}{Y}{non-}{Z}
+  \end{scope}
+
+ \end{tikzpicture}
+
+\end{center}
+
+
+\end{document}
