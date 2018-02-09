@@ -6,4 +6,4 @@ The format is primarily LaTeX with some HTML based on the [reveal.js](https://gi
 
 The [macros](/macros) folder contains a LaTeX macro for rendering categorical propositions and syllogysms and the Beamer template for the lecture presentations.
 
-Lecture materials were developed by Erik Hoversten based on [Hurley's A Concise Introduction to Logic, 12th ed.](https://books.google.com/books?id=WWcXjwEACAAJ&printsec=frontcover&dq=editions:ISBN0840034172).
+Lecture materials were developed by Erik Hoversten based on [Hurley's *A Concise Introduction to Logic, 12th ed*.](https://books.google.com/books?id=WWcXjwEACAAJ&printsec=frontcover&dq=editions:ISBN0840034172).
